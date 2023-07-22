@@ -1,0 +1,96 @@
+/* Подключаем шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/*Сброс стилей*/
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a, a:link, a:visited  {
+    text-decoration: none;
+    color: #202020;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #202020;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    background: linear-gradient(to right, #F9BB88 38%,  #F4F4F4 38%);
+    padding: 0px 12%;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+}
+
+.header__logo{
+    display: flex;
+    gap: 20px;
+}
+
+.header__title--txt{
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 35px;
+    margin-left: 5%;
+}
+
+.header__item a:hover{
+    color: #FF9646;
+    transition: 0.2s;
+}
+
+.header__contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+.phone a{
+    color: #202020;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.callMeBack{
+    width: 170px;
+    height: 40px;
+    background-color: #FF9646;
+    border: none;
+    border-radius: 4px;
+    color: #F4F4F4;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.callMeBack:hover{
+    background-color: #ef6c08;
+}
