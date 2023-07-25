@@ -731,6 +731,10 @@ h2{
     margin-top: 10px;
 }
 
+.fixBody {
+    overflow-y: hidden;
+}
+
 
 
 
