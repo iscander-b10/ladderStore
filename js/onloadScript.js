@@ -1,9 +1,11 @@
-import {pasteText} from './pasteTextInBlock';
-import {contractOffer} from './contractOffer';
-import {privacyPolicy} from './privacyPolicy';
+import {pasteText} from './pasteTextInBlock.js';
+import {contractOffer} from './contractOffer.js';
+import {privacyPolicy} from './privacyPolicy.js';
 
-window.onload = function(){
+function onload(){
     pasteText('confidentialityText', privacyPolicy);
     pasteText('offerText', contractOffer);
 }
+
+window.onload = onload;
 

@@ -215,6 +215,8 @@
     position: relative;
 }
 
+
+
 .privacyPolicyText__header{
     position: relative;
 }
@@ -240,18 +242,28 @@
     margin-top: 30px;
     line-height: 130%;
     height: 90%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     word-wrap: break-word;
+}
+
+.contractOffer__wrapper{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0%;
 }
 
 .contractOffer{
     display: flex;
     flex-direction: column;
-    height: 750px;
-    padding: 60px;
-    margin: 0 23%;
+    width: 53%;
+    height: 67%;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
     background-color: white;
+    padding: 25px 75px;
     position: relative;
 }
 
@@ -262,8 +274,8 @@
 .contractOffer__header::after{
     content: '';
     position: absolute;
-    top: 57%;
-    left: -5%;
+    top: 61%;
+    left: -3%;
     width: 120px;
     height: 18px;
     background: #F9BB88;
@@ -274,6 +286,29 @@
     font-weight: 700;
     z-index: 1;
     position: relative;
+}
+
+.offerText{
+    margin-top: 30px;
+    line-height: 130%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.offerConract:hover{
+    cursor: pointer;
+    color: grey;
+}
+
+.documentLinks{
+    display: flex;
+    gap: 20px;
+}
+
+.documentLinks p{
+    width: 20%;
 }
 
 

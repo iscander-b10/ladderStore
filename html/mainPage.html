@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="/css/desktop/mainPage/mainPage.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/links.css">
-    <script type="module" src="/js/onloadScript.js">
-        import {privacyPolicy} from "/js/privacyPolicy.js";
-        import {contractOffer} from "/js/contractOffer.js";
-        import {pasteText} from "/js/pasteTextInBlock.js";
-    </script> 
-    <script src="/js/onloadScript.js"></script>
+    <script src="/js/privacyPolicy.js" type="module"></script>
+    <script src="/js/contractOffer.js" type="module"></script>
+    <script src="/js/pasteTextInBlock.js" type="module"></script>
+    <script src="/js/onloadScript.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -423,13 +421,15 @@
                 <img src="/content/close.svg" alt="">
             </div>
         </div>
-        <div class="contractOffer">
-            <div class="contractOffer__header">
-                <h4 class="contractOffer__title">Договор оферты</h4>
-            </div>
-            <pre id="offerText" class="offerText"></pre>
-            <div class="close">
-                <img src="/content/close.svg" alt="">
+        <div class="contractOffer__wrapper">
+            <div class="contractOffer">
+                <div class="contractOffer__header">
+                    <h4 class="contractOffer__title">Договор оферты</h4>
+                </div>
+                <pre id="offerText" class="offerText"></pre>
+                <div class="close">
+                    <img src="/content/close.svg" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -480,7 +480,10 @@
         </nav>
         <div class="footer__row">
             <p>© 2020 Все права защищены.</p>
-            <p class="footer__privatPolicy">Политика конфиденциальности</p>
+            <div class="documentLinks">
+                <p id="contractOffer" class="offerConract">Договор оферты</p>
+                <p class="footer__privatPolicy" id="privacyPolicy">Политика конфиденциальности</p>
+            </div>
             <img src="/content/social.svg" alt="">
         </div>
     </footer>
