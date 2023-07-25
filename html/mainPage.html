@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/desktop/app/footer.css">
     <link rel="stylesheet" href="/css/desktop/app/links.css">
     <script src="/data/privacyPolicy.js" type="module"></script>
+    <script src="/js/toogleModal.js" type="module"></script>
     <script src="/data/contractOffer.js" type="module"></script>
     <script src="/js/pasteTextInBlock.js" type="module"></script>
     <script src="/js/onloadScript.js" type="module"></script>
@@ -355,7 +356,7 @@
             </div>
             <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
             <img src="/content/successfully.svg" alt="">
-            <div class="close">
+            <div class="close" >
                 <img src="/content/close.svg" alt="">
             </div>
         </div>
@@ -421,13 +422,13 @@
                 <img src="/content/close.svg" alt="">
             </div>
         </div>
-        <div class="contractOffer__wrapper">
+        <div class="contractOffer__wrapper" id="contractOffer__wrapper">
             <div class="contractOffer">
                 <div class="contractOffer__header">
                     <h4 class="contractOffer__title">Договор оферты</h4>
                 </div>
                 <pre id="offerText" class="offerText"></pre>
-                <div class="close">
+                <div class="close" id="closeOffer">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
