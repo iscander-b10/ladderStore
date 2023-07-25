@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="/css/desktop/mainPage/mainPage.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/links.css">
+    <script type="module" src="/js/onloadScript.js">
+        import {privacyPolicy} from "/js/privacyPolicy.js";
+        import {contractOffer} from "/js/contractOffer.js";
+        import {pasteText} from "/js/pasteTextInBlock.js";
+    </script> 
+    <script src="/js/onloadScript.js"></script>
 </head>
 <body>
     <header>
@@ -412,7 +418,7 @@
             <div class="privacyPolicyText__header">
                 <h4 class="privacyPolicyText__title">Политика конфиденциальности</h4>
             </div>
-            <p id="confidentialityText" class="confidentialityText"></p>
+            <pre id="confidentialityText" class="confidentialityText"></pre>
             <div class="close">
                 <img src="/content/close.svg" alt="">
             </div>
@@ -421,6 +427,7 @@
             <div class="contractOffer__header">
                 <h4 class="contractOffer__title">Договор оферты</h4>
             </div>
+            <pre id="offerText" class="offerText"></pre>
             <div class="close">
                 <img src="/content/close.svg" alt="">
             </div>
@@ -477,6 +484,5 @@
             <img src="/content/social.svg" alt="">
         </div>
     </footer>
-    <script src="/js/confidentialityModul.js"></script>
 </body>
 </html>
