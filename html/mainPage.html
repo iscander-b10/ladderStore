@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/desktop/mainPage/mainPage.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/links.css">
 </head>
 <body>
     <header>
@@ -307,6 +308,124 @@
                 </div>
             </div>
         </section>
+        <section class="opa">
+        <div class="application">
+            <div class="application__header">
+                <p class="application__title">Отправить заявку</p>
+            </div>
+            <p class="application__subtitle">на бесплатную консультацию</p>
+            <form action="#" method="post">
+            <ul class="application__list">
+                <li class="application__item">
+                    <div class="application__topRow">
+                        <p>Ваше  имя...</p>
+                        <img src="/content/application__check.svg" alt="">
+                    </div>
+                    <input type="text" name="username" class="application__input">
+                </li>
+                <li class="application__item">
+                    <div class="application__topRow">
+                        <p>Ваш телефон...</p>
+                        <img src="/content/application__check.svg" alt="">
+                    </div>
+                    <input type="tel" name="userphone" class="application__input">
+                </li>
+                <li class="application__item">
+                    <div class="application__topRow">
+                        <p>Ваш e-mail...</p>
+                        <img src="/content/application__check.svg" alt="">
+                    </div>
+                    <input type="text" name="usermail" class="application__input">
+                </li>
+            </ul>
+            </form>
+            <button class="application__btn">Отправить заявку</button>
+            <p class="application__privacyPolicy">Нажимая на кнопку вы соглашаетесь <br> с <u> политикой конфиденциальности </u></p>
+            <div class="close">
+                <img src="/content/close.svg" alt="">
+            </div>
+        </div>
+        <div class="applicationSuccessfully">
+            <div class="application__header">
+                <p class="application__title">Спасибо!</p>
+            </div>
+            <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
+            <img src="/content/successfully.svg" alt="">
+            <div class="close">
+                <img src="/content/close.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="ladders">
+        <div class="step">
+            <p class="step__text">Шаг 1 из 3</p>
+            <div class="step__ExternalScale">
+                <div class="step__InternalScale"></div>
+            </div>
+            <h4 class="step__title">Выберите тип лестницы</h4>
+            <ul class="stepOne__list">
+                <li class="stepOne__item">
+                    <div class="stepOne__starecase">
+                        <img src="/content/type-stairs-01.svg" alt="">
+                    </div>
+                    <div class="stepOne__dot"></div>
+                    <p class="stepOne__stairName">Прямая <br> лестница</p>
+                </li>
+                <li class="stepOne__item">
+                    <div class="stepOne__starecase">
+                        <img src="/content/type-stairs-02.svg" alt="">
+                    </div>
+                    <div class="stepOne__dot"></div>
+                    <p class="stepOne__stairName">Забежная <br> лестница</p>
+                </li>
+                <li class="stepOne__item">
+                    <div class="stepOne__starecase">
+                        <img src="/content/type-stairs-03.svg" alt="">
+                    </div>
+                    <div class="stepOne__dot stepOne__dot--active"></div>
+                    <p class="stepOne__stairName">Винтовая <br> лестница</p>
+                </li>
+                <li class="stepOne__item">
+                    <div class="stepOne__starecase">
+                        <img src="/content/type-stairs-04.svg" alt="">
+                    </div>
+                    <div class="stepOne__dot"></div>
+                    <p class="stepOne__stairName">Фасадная <br> лестница</p>
+                </li>
+                <li class="stepOne__item">
+                    <div class="stepOne__starecase">
+                        <img src="/content/type-stairs-05.svg" alt="">
+                    </div>
+                    <div class="stepOne__dot"></div>
+                    <p class="stepOne__stairName">Парадная <br> лестница</p>
+                </li>
+            </ul>
+            <div class="step__bottomRow">
+                <div class="step__decorLine"></div>
+                <button class="next"></button>
+                <div class="step__decorLine"></div>
+            </div>
+        </div>
+    </section>
+    <section class="popo">
+        <div class="privacyPolicyText">
+            <div class="privacyPolicyText__header">
+                <h4 class="privacyPolicyText__title">Политика конфиденциальности</h4>
+            </div>
+            <p id="confidentialityText" class="confidentialityText"></p>
+            <div class="close">
+                <img src="/content/close.svg" alt="">
+            </div>
+        </div>
+        <div class="contractOffer">
+            <div class="contractOffer__header">
+                <h4 class="contractOffer__title">Договор оферты</h4>
+            </div>
+            <div class="close">
+                <img src="/content/close.svg" alt="">
+            </div>
+        </div>
+    </section>
     </main>
     <footer>
         <nav class="footer__nav">
@@ -358,5 +477,6 @@
             <img src="/content/social.svg" alt="">
         </div>
     </footer>
+    <script src="/js/confidentialityModul.js"></script>
 </body>
 </html>
