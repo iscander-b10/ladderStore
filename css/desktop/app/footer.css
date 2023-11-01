@@ -55,6 +55,11 @@ footer{
     gap: 10px;
 }
 
+.footer__item a:hover{
+    color: #FF9646;
+    transition: 0.2s;
+}
+
 .footer__contacts{
     display: flex;
     flex-direction: column;
@@ -68,6 +73,21 @@ footer{
     color: rgba(32, 32, 32, 0.40);
 }
 
-.footer__privatPolicy{
-    margin-right: 5%;
+.footer__documentLinks{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 60%;
 }
+
+.footer__documentLinks li{
+    color: rgba(32, 32, 32, 0.40);
+    font-size: 0.81rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer__documentLinks li:hover{
+    color: rgba(32, 32, 32, 0.7);
+}
+

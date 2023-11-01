@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="/css/desktop/mainPage/mainPage.css">
     <link rel="stylesheet" href="/css/desktop/app/header.css">
     <link rel="stylesheet" href="/css/desktop/app/footer.css">
-    <link rel="stylesheet" href="/css/desktop/app/links.css">
-    <script src="/data/privacyPolicy.js" type="module"></script>
-    <script src="/js/toogleModal.js" type="module"></script>
-    <script src="/data/contractOffer.js" type="module"></script>
-    <script src="/js/pasteTextInBlock.js" type="module"></script>
+    <link rel="stylesheet" href="/css/desktop/app/modalWindows.css">
+    <link rel="stylesheet" href="/css/desktop/app/privacyPolicy&&ContractOffer.css">
+    <link rel="stylesheet" href="/css/desktop/app/application.css">
+    <script src="/data/privacyPolicyContent.js" type="module"></script>
+    <script src="/data/contractOfferContent.js" type="module"></script>
+    <script src="/js/pasteContentInBlock.js" type="module"></script>
+    <script src="/js/toggleModal.js" type="module"></script>
+    <script src="/js/formVerification.js" type="module"></script>
     <script src="/js/onloadScript.js" type="module"></script>
 </head>
 <body>
@@ -48,11 +51,61 @@
                 <div class=phone>
                     <a href="tel:+79302835065">+7 (930) 283-50-65</a>
                 </div>
-                <button class="callMeBack">Перезвоните мне!</button>
+                <button class="callMeBack" id="callMeBack">Перезвоните мне!</button>
             </div>
         </nav>
     </header>
     <main>
+        <div class="application__wrapper" id="application">
+            <div class="application">
+                <div class="application__header">
+                    <p class="application__title">Отправить заявку</p>
+                </div>
+                <p class="application__subtitle">на бесплатную консультацию</p>
+                <form action="#" method="post" id="application__form">
+                    <ul class="application__list">
+                        <li class="application__item">
+                            <div class="application__topRow">
+                                <label for="username">Ваше  имя...</label>
+                                <img src="/content/application__check.svg" alt="">
+                            </div>
+                            <input type="text" name="username" class="application__input" id="username">
+                        </li>
+                        <li class="application__item">
+                            <div class="application__topRow">
+                                <label for="tel">Ваш телефон...</label>
+                                <img src="/content/application__check.svg" alt="">
+                            </div>
+                            <input type="tel" name="userphone" class="application__input" id="tel">
+                        </li>
+                        <li class="application__item">
+                            <div class="application__topRow">
+                                <label for="usermail">Ваш e-mail...</label>
+                                <img src="/content/application__check.svg" alt="">
+                            </div>
+                            <input type="text" name="usermail" class="application__input" id="usermail">
+                        </li>
+                    </ul>
+                    <button class="application__btn" id="application__btn" type="button">Отправить заявку</button>
+                </form>
+                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="applicationPrivacyPolicy"> политикой конфиденциальности </span></p>
+                <div class="close" id="closeApplicationWindow">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfully">
+            <div class="applicationSuccessfully">
+                <div class="application__header">
+                    <p class="application__title">Спасибо!</p>
+                </div>
+                <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
+                <img src="/content/successfully.svg" alt="">
+                <div class="close" id="closeApplicationSuccessfully">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
+        </div>
         <section class="title">
             <img src="/content/mainPage__title.png" alt="" class="title__img">
             <div class="title__text">
@@ -62,6 +115,10 @@
                 <button class="consultation">Консультация</button>
             </div>
         </section>
+        <div class="selectionOfStairs" id="selectionOfStairs">
+            <h4 class="selectionOfStairs__title">Рассчитайте стоимость <br> вашей лестницы <b>в 3 шага</b></h4>
+            <button class="calculateTheCost" id="calculateTheCost">Подробнее</button>
+        </div>
         <section class="aboutUs">
             <ul class="aboutUs__menu">
                 <li class="aboutUs__item">
@@ -148,9 +205,20 @@
             </form>
             <div class="promotion__sendAnApplication">
                 <input type="submit" value="Отправить заявку" class="sendAnApplication"/>
-                <p class="privacyPolicy">Нажимая на кнопку <br> вы соглашаетесь  с <span>политикой <br> конфиденциальности</span></p>
+                <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="promotionPrivacyPolicy">политикой <br> конфиденциальности</span></p>
             </div>
         </section>
+        <div class="privacyPolicy__wrapper" id="privacyPolicy__wrapper">
+            <div class="privacyPolicy">
+                <div class="privacyPolicy__header">
+                    <h4 class="privacyPolicy__title">Политика конфиденциальности</h4>
+                </div>
+                <pre id="privacyPolicy__content" class="privacyPolicy__content"></pre>
+                <div class="close" id="closePrivacyPolicy">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
+        </div>
         <section class="advantage">
             <div class="advantage__header">
                 <h2>Почему стоит <br> обратиться к нам</h2>
@@ -309,117 +377,232 @@
                 </form>
                 <div>
                     <button class="feedback__btn">Отправить сообщение</button>
-                    <p class="privacyPolicy">Нажимая на кнопку вы соглашаетесь с <span>политикой конфиденциальности</span></p>
+                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="feedbackPrivacyPolicy">политикой конфиденциальности</span></p>
                 </div>
             </div>
         </section>
-        <section class="opa">
-        <div class="application">
-            <div class="application__header">
-                <p class="application__title">Отправить заявку</p>
-            </div>
-            <p class="application__subtitle">на бесплатную консультацию</p>
-            <form action="#" method="post">
-            <ul class="application__list">
-                <li class="application__item">
-                    <div class="application__topRow">
-                        <p>Ваше  имя...</p>
-                        <img src="/content/application__check.svg" alt="">
-                    </div>
-                    <input type="text" name="username" class="application__input">
-                </li>
-                <li class="application__item">
-                    <div class="application__topRow">
-                        <p>Ваш телефон...</p>
-                        <img src="/content/application__check.svg" alt="">
-                    </div>
-                    <input type="tel" name="userphone" class="application__input">
-                </li>
-                <li class="application__item">
-                    <div class="application__topRow">
-                        <p>Ваш e-mail...</p>
-                        <img src="/content/application__check.svg" alt="">
-                    </div>
-                    <input type="text" name="usermail" class="application__input">
-                </li>
-            </ul>
-            </form>
-            <button class="application__btn">Отправить заявку</button>
-            <p class="application__privacyPolicy">Нажимая на кнопку вы соглашаетесь <br> с <u> политикой конфиденциальности </u></p>
-            <div class="close">
-                <img src="/content/close.svg" alt="">
-            </div>
-        </div>
-        <div class="applicationSuccessfully">
-            <div class="application__header">
-                <p class="application__title">Спасибо!</p>
-            </div>
-            <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
-            <img src="/content/successfully.svg" alt="">
-            <div class="close" >
-                <img src="/content/close.svg" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="ladders">
-        <div class="step">
-            <p class="step__text">Шаг 1 из 3</p>
-            <div class="step__ExternalScale">
-                <div class="step__InternalScale"></div>
-            </div>
-            <h4 class="step__title">Выберите тип лестницы</h4>
-            <ul class="stepOne__list">
-                <li class="stepOne__item">
-                    <div class="stepOne__starecase">
-                        <img src="/content/type-stairs-01.svg" alt="">
-                    </div>
-                    <div class="stepOne__dot"></div>
-                    <p class="stepOne__stairName">Прямая <br> лестница</p>
-                </li>
-                <li class="stepOne__item">
-                    <div class="stepOne__starecase">
-                        <img src="/content/type-stairs-02.svg" alt="">
-                    </div>
-                    <div class="stepOne__dot"></div>
-                    <p class="stepOne__stairName">Забежная <br> лестница</p>
-                </li>
-                <li class="stepOne__item">
-                    <div class="stepOne__starecase">
-                        <img src="/content/type-stairs-03.svg" alt="">
-                    </div>
-                    <div class="stepOne__dot stepOne__dot--active"></div>
-                    <p class="stepOne__stairName">Винтовая <br> лестница</p>
-                </li>
-                <li class="stepOne__item">
-                    <div class="stepOne__starecase">
-                        <img src="/content/type-stairs-04.svg" alt="">
-                    </div>
-                    <div class="stepOne__dot"></div>
-                    <p class="stepOne__stairName">Фасадная <br> лестница</p>
-                </li>
-                <li class="stepOne__item">
-                    <div class="stepOne__starecase">
-                        <img src="/content/type-stairs-05.svg" alt="">
-                    </div>
-                    <div class="stepOne__dot"></div>
-                    <p class="stepOne__stairName">Парадная <br> лестница</p>
-                </li>
-            </ul>
-            <div class="step__bottomRow">
-                <div class="step__decorLine"></div>
-                <button class="next"></button>
-                <div class="step__decorLine"></div>
+        <div class="choiceOfStairs__container" id="choiceOfStairs__container">
+            <div class="choiceOfStairs">
+                <p class="choiceOfStairs__text">Шаг 1 из 3</p>
+                <div class="choiceOfStairs__ExternalScale">
+                    <div class="choiceOfStairs__InternalScale--33"></div>
+                </div>
+                <h4 class="choiceOfStairs__title">Выберите тип лестницы</h4>
+                <ul class="choiceOfStairs__list">
+                    <li class="choiceOfStairs__item">
+                        <div class="choiceOfStairs__starecase">
+                            <img src="/content/type-stairs-01.svg" alt="">
+                        </div>
+                        <div class="choiceOfStairs__dot"></div>
+                        <p class="choiceOfStairs__Name">Прямая <br> лестница</p>
+                    </li>
+                    <li class="choiceOfStairs__item" data-value="">
+                        <div class="choiceOfStairs__starecase">
+                            <img src="/content/type-stairs-02.svg" alt="">
+                        </div>
+                        <div class="choiceOfStairs__dot"></div>
+                        <p class="choiceOfStairs__Name">Забежная <br> лестница</p>
+                    </li>
+                    <li class="choiceOfStairs__item">
+                        <div class="choiceOfStairs__starecase">
+                            <img src="/content/type-stairs-03.svg" alt="">
+                        </div>
+                        <div class="choiceOfStairs__dot choiceOfStairs__dot--active"></div>
+                        <p class="choiceOfStairs__Name">Винтовая <br> лестница</p>
+                    </li>
+                    <li class="choiceOfStairs__item">
+                        <div class="choiceOfStairs__starecase">
+                            <img src="/content/type-stairs-04.svg" alt="">
+                        </div>
+                        <div class="choiceOfStairs__dot"></div>
+                        <p class="choiceOfStairs__Name">Фасадная <br> лестница</p>
+                    </li>
+                    <li class="choiceOfStairs__item">
+                        <div class="choiceOfStairs__starecase">
+                            <img src="/content/type-stairs-05.svg" alt="">
+                        </div>
+                        <div class="choiceOfStairs__dot"></div>
+                        <p class="choiceOfStairs__Name">Парадная <br> лестница</p>
+                    </li>
+                </ul>
+                <div class="choiceOfStairs__bottomRow">
+                    <div class="choiceOfStairs__decorLine"></div>
+                    <button class="next" id="nextOne">Следующий шаг</button>
+                    <div class="choiceOfStairs__decorLine"></div>
+                </div>
+                <div class="close" id="closeStepOne">
+                    <img src="/content/close.svg" alt="">
+                </div>
             </div>
         </div>
-    </section>
-    <section class="popo">
-        <div class="privacyPolicyText">
-            <div class="privacyPolicyText__header">
-                <h4 class="privacyPolicyText__title">Политика конфиденциальности</h4>
+        <div class="sizeOfStairs" id="sizeOfStairs">
+            <div class="choiceOfStairs">
+                <p class="choiceOfStairs__text">Шаг 2 из 3</p>
+                <div class="choiceOfStairs__ExternalScale">
+                    <div class="choiceOfStairs__InternalScale--66"></div>
+                </div>
+                <div class="sizeOfStairs__main">
+                    <div class="sizeOfStairs__view">
+                        <h4 class="choiceOfStairs__title">Выберите вид</h4>
+                        <ul class="sizeOfStairs__viewList">
+                            <li class="sizeOfStairs__viewItem">
+                                <div class="sizeOfStairs__starecase">
+                                    <img src="/content/type-stairs-05.svg" alt="">
+                                </div>
+                                <div class="sizeOfStairs__dot"></div>
+                                <p class="choiceOfStairs__Name">Гладкоподшитая <br> лестница</p>
+                            </li>
+                            <li class="sizeOfStairs__viewItem">
+                                <div class="sizeOfStairs__starecase">
+                                    <img src="/content/type-stairs-05.svg" alt="">
+                                </div>
+                                <div class="sizeOfStairs__dot sizeOfStairs__dot--active"></div>
+                                <p class="choiceOfStairs__Name">Зеркальная <br> лестница</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sizeOfStairs__size">
+                        <h4 class="choiceOfStairs__title">Укажите рамеры</h4>
+                        <form action="#" method="post" id="size__form" class="size__form">
+                            <ul class="sizeOfStairs__sizeList">
+                                <li class="sizeOfStairs__sizeItem">
+                                    <label for="height">Высота между этажами (см)</label>
+                                    <input type="text" id="height" class="sizeOfStairs__input">
+                                </li>
+                                <li class="sizeOfStairs__sizeItem">
+                                    <label for="length">Длина лестницы (см)</label>
+                                    <input type="text" id="length" class="sizeOfStairs__input">
+                                </li>
+                                <li class="sizeOfStairs__sizeItem">
+                                    <label for="width">Ширина ступени (см)</label>
+                                    <input type="text" id="width" class="sizeOfStairs__input">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="choiceOfStairs__bottomRow">
+                    <div class="choiceOfStairs__decorLine"></div>
+                    <button class="next" id="nextTwo">Следующий шаг</button>
+                    <div class="choiceOfStairs__decorLine"></div>
+                </div>
+                <div class="close" id="closeStepTwo">
+                    <img src="/content/close.svg" alt="">
+                </div>
             </div>
-            <pre id="confidentialityText" class="confidentialityText"></pre>
-            <div class="close">
-                <img src="/content/close.svg" alt="">
+        </div>
+        <div class="choiceOfStairs__container" id="facing">
+            <div class="choiceOfStairs">
+                <p class="choiceOfStairs__text">Шаг 3 из 3</p>
+                <div class="choiceOfStairs__ExternalScale">
+                    <div class="choiceOfStairs__InternalScale--100"></div>
+                </div>
+                <h4 class="choiceOfStairs__title">Выберите вариант отделки</h4>
+                <ul class="facing__list">
+                    <li class="facing__item">
+                        <div class="facing__starecase">
+                            <img src="/content/woodTrim.svg" alt="">
+                        </div>
+                        <div class="facing__dot"></div>
+                        <p class="choiceOfStairs__Name">Отделка <br> Деревом</p>
+                    </li>
+                    <li class="facing__item">
+                        <div class="facing__starecase">
+                            <img src="/content/stoneFinishing.svg" alt="">
+                        </div>
+                        <div class="facing__dot"></div>
+                        <p class="choiceOfStairs__Name">Отделка <br> камнем</p>
+                    </li>
+                    <li class="facing__item">
+                        <div class="facing__starecase">
+                            <img src="/content/tiling.svg" alt="">
+                        </div>
+                        <div class="facing__dot facing__dot--active"></div>
+                        <p class="choiceOfStairs__Name">Отделка <br> плиткой</p>
+                    </li>
+                    <li class="facing__item">
+                        <div class="facing__starecase">
+                            <img src="/content/forgedProducts.svg" alt="">
+                        </div>
+                        <div class="facing__dot"></div>
+                        <p class="choiceOfStairs__Name">Кованными <br> изделиями</p>
+                    </li>
+                    <li class="facing__item">
+                        <div class="facing__starecase">
+                            <img src="/content/withoutFinishing.svg" alt="">
+                        </div>
+                        <div class="facing__dot"></div>
+                        <p class="choiceOfStairs__Name">Без отделки</p>
+                    </li>
+                </ul>
+                <div class="choiceOfStairs__bottomRow">
+                    <div class="choiceOfStairs__decorLine"></div>
+                    <button class="next" id="calculate">Рассчитать стоимость</button>
+                    <div class="choiceOfStairs__decorLine"></div>
+                </div>
+                <div class="close" id="closeFacing">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="sizeOfStairs" id="finish">
+            <div class="choiceOfStairs">
+                <p class="choiceOfStairs__text">Готово!</p>
+                <div class="choiceOfStairs__ExternalScale">
+                    <div class="choiceOfStairs__InternalScale--100"></div>
+                </div>
+                <div class="finish__main">
+                    <div class="finish__form">
+                        <h4 class="choiceOfStairs__title">Куда отправить  рассчет?</h4>
+                        <form action="#" method="post" id="finish" class="finish">
+                            <ul class="finish__list">
+                                <li class="finish__item">
+                                    <label for="username">Ваше  имя...</label>
+                                    <input type="text" name="username" class="finish__input" id="username">
+                                </li>
+                                <li class="finish__item">
+                                    <label for="tel">Ваш телефон...</label>
+                                    <input type="tel" name="userphone" class="finish__input" id="tel">
+                                </li>
+                                <li class="finish__item">
+                                    <label for="usermail">Ваш e-mail...</label>
+                                    <input type="text" name="usermail" class="finish__input" id="usermail">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="finish__options">
+                        <h4 class="choiceOfStairs__title">Параметры</h4>
+                        <ul class="finish__optionsList">
+                            <li class="finish__optionsItem">
+                                <p>Тип лестницы:</p>
+                            </li>
+                            <li class="finish__optionsItem">
+                                <p>Вид лестницы:</p>
+                            </li>
+                            <li class="finish__optionsItem">
+                                <p>Тип отделки:</p>
+                            </li>
+                            <li class="finish__optionsItem">
+                                <p>Длина лесницы:</p>
+                            </li>
+                            <li class="finish__optionsItem">
+                                <p>Ширина ступени:</p>
+                            </li>
+                            <li class="finish__optionsItem">
+                                <p>Высота этажа:</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="choiceOfStairs__bottomRow">
+                    <div class="choiceOfStairs__decorLine"></div>
+                    <button class="next" id="getAQuote">Получить рассчет</button>
+                    <div class="choiceOfStairs__decorLine"></div>
+                </div>
+                <div class="close" id="closeFinish">
+                    <img src="/content/close.svg" alt="">
+                </div>
             </div>
         </div>
         <div class="contractOffer__wrapper" id="contractOffer__wrapper">
@@ -427,13 +610,12 @@
                 <div class="contractOffer__header">
                     <h4 class="contractOffer__title">Договор оферты</h4>
                 </div>
-                <pre id="offerText" class="offerText"></pre>
-                <div class="close" id="closeOffer">
+                <pre id="contractOffer__content" class="contractOffer__content"></pre>
+                <div class="close" id="closeContractOffer">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
         </div>
-    </section>
     </main>
     <footer>
         <nav class="footer__nav">
@@ -452,22 +634,22 @@
             </div>
             <div class="footer__columns">
                 <ul class="footer__menu">
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#">О компании</a>
                     </li>
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#">Каталог</a>
                     </li>
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#">Блог</a>
                     </li>
                 </ul>
                 <ul class="footer__menu">
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#">Примеры работ</a>
                     </li>
                     
-                    <li class="header__item">
+                    <li class="footer__item">
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
@@ -476,15 +658,15 @@
                 <div class=phone>
                     <a href="tel:+79302835065">+7 (930) 283-50-65</a>
                 </div>
-                <button class="callMeBack">Перезвоните мне!</button>
+                <button class="callMeBack" id="footer__callMeBack">Перезвоните мне!</button>
             </div>
         </nav>
         <div class="footer__row">
             <p>© 2020 Все права защищены.</p>
-            <div class="documentLinks">
-                <p id="contractOffer" class="offerConract">Договор оферты</p>
-                <p class="footer__privatPolicy" id="privacyPolicy">Политика конфиденциальности</p>
-            </div>
+            <ul class="footer__documentLinks">
+                <li id="conractOffer--btn">Договор оферты</li>
+                <li id="footerPrivacyPolicy" class="privacyPolicyText">Политика конфиденциальности</li>
+            </ul>
             <img src="/content/social.svg" alt="">
         </div>
     </footer>
