@@ -3,6 +3,7 @@ import {contractOfferContent} from '../data/contractOfferContent.js';
 import {privacyPolicyContent} from '../data/privacyPolicyContent.js';
 import {toggleModal} from '../js/toggleModal.js';
 import {scrollOfStairs} from '../js/scrollOfStairs.js';
+import {checkOrderForm} from '../js/orderForm.js';
 
 function onload(){
     pasteContent('contractOffer__content', contractOfferContent);
@@ -67,7 +68,8 @@ function onload(){
     findModalWindow("closeFinish", "finish");
 
     scrollOfStairs();
-      
+    
+    checkOrderForm();
 }
 
 window.onload = onload;
