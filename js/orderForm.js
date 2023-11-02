@@ -40,7 +40,7 @@ export const checkOrderForm = () => {
     //step3
     document.getElementById('calculate').addEventListener('click', () => {
         order.finishesView = document.getElementsByClassName('facing__list')[0].children.length - 1;
-        window.setTimeout(addValues, 0);
+        addValues();
     });
     
     //step4
