@@ -209,11 +209,17 @@ h2{
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    overflow-x: auto;
+}
+
+.typesOfStairs__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .typesOfStairs__item{
     border: 2px solid #F4F4F4;
-    width: 33%;
+    min-width: 30%;
 }
 
 .typesOfStairs__staircaseImage{

@@ -2,6 +2,7 @@ import {pasteContent} from '../js/pasteContentInBlock.js';
 import {contractOfferContent} from '../data/contractOfferContent.js';
 import {privacyPolicyContent} from '../data/privacyPolicyContent.js';
 import {toggleModal} from '../js/toggleModal.js';
+import {scrollOfStairs} from '../js/scrollOfStairs.js';
 
 function onload(){
     pasteContent('contractOffer__content', contractOfferContent);
@@ -64,6 +65,9 @@ function onload(){
     });
     
     findModalWindow("closeFinish", "finish");
+
+    scrollOfStairs();
+      
 }
 
 window.onload = onload;
