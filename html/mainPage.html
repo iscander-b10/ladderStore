@@ -484,35 +484,35 @@
                         <div class="choiceOfStairs__starecase">
                             <img src="/content/type-stairs-01.svg" alt="">
                         </div>
-                        <div class="choiceOfStairs__dot"></div>
+                        <input class="choiceOfStairs__dot" type="radio" name="typesOfStairs" value="Прямая лестница">
                         <p class="choiceOfStairs__Name">Прямая <br> лестница</p>
                     </li>
                     <li class="choiceOfStairs__item" data-value="">
                         <div class="choiceOfStairs__starecase">
                             <img src="/content/type-stairs-02.svg" alt="">
                         </div>
-                        <div class="choiceOfStairs__dot"></div>
+                        <input class="choiceOfStairs__dot" type="radio" name="typesOfStairs" value="Забежная лестница">
                         <p class="choiceOfStairs__Name">Забежная <br> лестница</p>
                     </li>
                     <li class="choiceOfStairs__item">
                         <div class="choiceOfStairs__starecase">
                             <img src="/content/type-stairs-03.svg" alt="">
                         </div>
-                        <div class="choiceOfStairs__dot choiceOfStairs__dot--active"></div>
+                        <input class="choiceOfStairs__dot" type="radio" name="typesOfStairs" value="Винтовая лестница" checked>
                         <p class="choiceOfStairs__Name">Винтовая <br> лестница</p>
                     </li>
                     <li class="choiceOfStairs__item">
                         <div class="choiceOfStairs__starecase">
                             <img src="/content/type-stairs-04.svg" alt="">
                         </div>
-                        <div class="choiceOfStairs__dot"></div>
+                        <input class="choiceOfStairs__dot" type="radio" name="typesOfStairs" value="Фасадная лестница">
                         <p class="choiceOfStairs__Name">Фасадная <br> лестница</p>
                     </li>
                     <li class="choiceOfStairs__item">
                         <div class="choiceOfStairs__starecase">
                             <img src="/content/type-stairs-05.svg" alt="">
                         </div>
-                        <div class="choiceOfStairs__dot"></div>
+                        <input class="choiceOfStairs__dot" type="radio" name="typesOfStairs" value="Парадная лестница">
                         <p class="choiceOfStairs__Name">Парадная <br> лестница</p>
                     </li>
                 </ul>
@@ -540,14 +540,14 @@
                                 <div class="sizeOfStairs__starecase">
                                     <img src="/content/type-stairs-05.svg" alt="">
                                 </div>
-                                <div class="sizeOfStairs__dot"></div>
+                                <input class="sizeOfStairs__dot" type="radio" name="viewStairs" value="Гладкоподшитая лестница">
                                 <p class="choiceOfStairs__Name">Гладкоподшитая <br> лестница</p>
                             </li>
                             <li class="sizeOfStairs__viewItem">
                                 <div class="sizeOfStairs__starecase">
                                     <img src="/content/type-stairs-05.svg" alt="">
                                 </div>
-                                <div class="sizeOfStairs__dot sizeOfStairs__dot--active"></div>
+                                <input class="sizeOfStairs__dot" type="radio" name="viewStairs" value="Зеркальная лестница" checked>
                                 <p class="choiceOfStairs__Name">Зеркальная <br> лестница</p>
                             </li>
                         </ul>
@@ -558,15 +558,18 @@
                             <ul class="sizeOfStairs__sizeList">
                                 <li class="sizeOfStairs__sizeItem">
                                     <label for="height">Высота между этажами (см)</label>
-                                    <input type="text" id="height" class="sizeOfStairs__input">
+                                    <input type="number" id="height" class="sizeOfStairs__input">
+                                    <span id="clueHeight" class="clue">Введите значение в интервале от 200 до 400</span>
                                 </li>
                                 <li class="sizeOfStairs__sizeItem">
                                     <label for="length">Длина лестницы (см)</label>
-                                    <input type="text" id="length" class="sizeOfStairs__input">
+                                    <input type="number" id="length" class="sizeOfStairs__input">
+                                    <span id="clueHeight" class="clue">Введите значение в интервале от 100 до 700</span>
                                 </li>
                                 <li class="sizeOfStairs__sizeItem">
                                     <label for="width">Ширина ступени (см)</label>
-                                    <input type="text" id="width" class="sizeOfStairs__input">
+                                    <input type="number" id="width" class="sizeOfStairs__input">
+                                    <span id="clueHeight" class="clue">Введите значение в интервале от 100 до 400</span>
                                 </li>
                             </ul>
                         </form>
@@ -594,35 +597,35 @@
                         <div class="facing__starecase">
                             <img src="/content/woodTrim.svg" alt="">
                         </div>
-                        <div class="facing__dot"></div>
+                        <input class="facing__dot" type="radio" value="Отделка деревом" name="facing">
                         <p class="choiceOfStairs__Name">Отделка <br> Деревом</p>
                     </li>
                     <li class="facing__item">
                         <div class="facing__starecase">
                             <img src="/content/stoneFinishing.svg" alt="">
                         </div>
-                        <div class="facing__dot"></div>
+                        <input class="facing__dot" type="radio" value="Отделка камнем" name="facing">
                         <p class="choiceOfStairs__Name">Отделка <br> камнем</p>
                     </li>
                     <li class="facing__item">
                         <div class="facing__starecase">
                             <img src="/content/tiling.svg" alt="">
                         </div>
-                        <div class="facing__dot facing__dot--active"></div>
+                        <input class="facing__dot" type="radio" value="Отделка плиткой" name="facing" checked>
                         <p class="choiceOfStairs__Name">Отделка <br> плиткой</p>
                     </li>
                     <li class="facing__item">
                         <div class="facing__starecase">
                             <img src="/content/forgedProducts.svg" alt="">
                         </div>
-                        <div class="facing__dot"></div>
+                        <input class="facing__dot" type="radio" value="Кованными изделиями" name="facing">
                         <p class="choiceOfStairs__Name">Кованными <br> изделиями</p>
                     </li>
                     <li class="facing__item">
                         <div class="facing__starecase">
                             <img src="/content/withoutFinishing.svg" alt="">
                         </div>
-                        <div class="facing__dot"></div>
+                        <input class="facing__dot" type="radio" value="Без отделки" name="facing">
                         <p class="choiceOfStairs__Name">Без отделки</p>
                     </li>
                 </ul>
@@ -649,41 +652,39 @@
                             <ul class="finish__list">
                                 <li class="finish__item">
                                     <label for="username">Ваше  имя...</label>
-                                    <input type="text" name="username" class="finish__input" id="username1">
+                                    <input type="text" name="username" class="finish__input" id="customerName">
                                 </li>
                                 <li class="finish__item">
                                     <label for="tel">Ваш телефон...</label>
-                                    <input type="tel" name="userphone" class="finish__input" id="phone1">
+                                    <input type="number" name="userphone" class="finish__input" id="customerPhone">
                                 </li>
                                 <li class="finish__item">
                                     <label for="usermail">Ваш e-mail...</label>
-                                    <input type="text" name="usermail" class="finish__input" id="usermail1">
+                                    <input type="text" name="usermail" class="finish__input" id="customerMail">
                                 </li>
                             </ul>
                         </form>
                     </div>
                     <div class="finish__options">
                         <h4 class="choiceOfStairs__title">Параметры</h4>
-                        <ul class="finish__optionsList">
-                            <li class="finish__optionsItem">
-                                <p>Тип лестницы:</p>
-                            </li>
-                            <li class="finish__optionsItem">
-                                <p>Вид лестницы:</p>
-                            </li>
-                            <li class="finish__optionsItem">
-                                <p>Тип отделки:</p>
-                            </li>
-                            <li class="finish__optionsItem">
-                                <p>Длина лесницы:</p>
-                            </li>
-                            <li class="finish__optionsItem">
-                                <p>Ширина ступени:</p>
-                            </li>
-                            <li class="finish__optionsItem">
-                                <p>Высота этажа:</p>
-                            </li>
-                        </ul>
+                        <div class="finish__optionsRow">
+                            <ul class="finish__optionsList">
+                                <li class="finish__optionsItem">Тип лестницы:</li>
+                                <li class="finish__optionsItem">Вид лестницы:</li>
+                                <li class="finish__optionsItem">Тип отделки:</li>
+                                <li class="finish__optionsItem">Длина лесницы:</li>
+                                <li class="finish__optionsItem">Ширина ступени:</li>
+                                <li class="finish__optionsItem">Высота этажа:</li>
+                            </ul>
+                            <ul class="finish__optionsValue">
+                                <li id="valueType" class="value"></li>
+                                <li id="valueView" class="value"></li>
+                                <li id="valueFinish" class="value"></li>
+                                <li id="valueLength" class="value"></li>
+                                <li id="valueWidth" class="value"></li>
+                                <li id="valueHeight" class="value"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="choiceOfStairs__bottomRow">

@@ -88,15 +88,10 @@
     position: absolute;
     bottom: 45px;
     left: 40%;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background: radial-gradient(#F4F4F4 35%, white 35%);
+    width: 40px;
+    height: 40px;
+    background-color: #F9BB88;
     cursor: pointer;
-}
-
-.choiceOfStairs__dot--active {
-    background: radial-gradient(white 35%, #F9BB88 35%);
 }
 
 .choiceOfStairs__bottomRow{
@@ -201,10 +196,6 @@
     cursor: pointer;
 }
 
-.sizeOfStairs__dot--active{
-    background: radial-gradient(white 35%, #F9BB88 35%);
-}
-
 .sizeOfStairs__size{
     display: flex;
     flex-direction: column;
@@ -238,7 +229,10 @@
     border: none;
     border-bottom: 2px solid rgba(32, 32, 32, 0.40);
     outline: none; 
+    height: 30px;
+    padding-left: 7px;
 }
+
 
 .choiceOfStairs__InternalScale--100{
     width: 100%;
@@ -288,10 +282,6 @@
     cursor: pointer;
 }
 
-.facing__dot--active{
-    background: radial-gradient(white 35%, #F9BB88 35%);
-}
-
 .finish__main{
     display: flex;
     width: 100%;
@@ -335,6 +325,9 @@
     border: none;
     border-bottom: 2px solid rgba(32, 32, 32, 0.40);
     outline: none;
+    width: 70%;
+    height: 25px;
+    padding-left: 5px;
 }
 
 .finish__options{
@@ -345,15 +338,39 @@
     width: 50%;
 }
 
+.finish__optionsRow{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
 .finish__optionsList{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%;
-    margin-left: 30%;
+}
+
+.finish__optionsValue{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    font-weight: 600;
 }
 
 .active{
     display: flex;
+}
+
+.clue{
+    color: rgba(101, 100, 100, 0.8);
+    font-size: 0.6rem;
+    margin-top: -15px;
+}
+
+.error{
+    box-shadow: red 0px 0px 4px 0px inset;
+    border: 1px solid red;
+    border-radius: 5px;
 }
 

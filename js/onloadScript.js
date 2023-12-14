@@ -51,11 +51,11 @@ function onload(){
 
     findModalWindow("closeStepTwo", "sizeOfStairs");
 
-    const nextTwo = document.getElementById("nextTwo");
-    nextTwo.addEventListener("click", () => {
-        document.getElementById("sizeOfStairs").classList.remove("active");
-        document.getElementById("facing").classList.add("active"); 
-    });
+    // const nextTwo = document.getElementById("nextTwo");
+    // nextTwo.addEventListener("click", () => {
+    //     document.getElementById("sizeOfStairs").classList.remove("active");
+    //     document.getElementById("facing").classList.add("active"); 
+    // });
 
     findModalWindow("closeFacing", "facing");
     
