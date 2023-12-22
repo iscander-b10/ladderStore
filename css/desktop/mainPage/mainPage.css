@@ -206,7 +206,6 @@ h2{
 
 .typesOfStairs__list{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 30px;
     overflow-x: auto;
@@ -219,7 +218,7 @@ h2{
 
 .typesOfStairs__item{
     border: 2px solid #F4F4F4;
-    min-width: 30%;
+    min-width: 31%;
 }
 
 .typesOfStairs__staircaseImage{
@@ -246,6 +245,10 @@ h2{
 .typesOfStairs__title{
     font-size: 1.44rem;
     font-weight: 600;
+}
+
+.typesOfStairs__name{
+    text-align: center;
 }
 
 .typesOfStairs__price{

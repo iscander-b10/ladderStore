@@ -1,18 +1,25 @@
+header{
+    padding-bottom: 480px;
+}
+
 main{
     position: relative;
 }
 
-.aboutCompany{
-    padding: 30px 12% 150px;
-    background: linear-gradient(to right, #F9BB88 38%,  #F4F4F4 38%);
+.typesOfStairs{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 12% 110px;
+    position: absolute;
+    top: -47%;
 }
 
-.aboutCompany__title{
+.typesOfStairs__title{
     position: relative;
-    margin-bottom: 40px;
 }
 
-.aboutCompany__title::after{
+.typesOfStairs__title::after{
     content: '';
     position: absolute;
     top: 57%;
@@ -30,153 +37,75 @@ h2{
     line-height: 120%
 }
 
-.aboutCompany__information{
+.typesOfStairs__list{
     display: flex;
-    justify-content: space-between;
-    gap: 85px;
-}
-
-.aboutCompany__informationTitle{
-    margin-bottom: 30px;
-    line-height: 160%;
-}
-
-.aboutCompany__informationItem:first-child{
-    width: 34%;
-}
-
-.aboutCompany__informationItem:nth-child(2){
-    width: 30%;
-}
-
-.aboutCompany__informationItem>img{
-    width: 100%;
-}
-
-.aboutCompany__statistics{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.aboutCompany__statisticsItem{
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
-    position: relative;
-}
-
-.aboutCompany__statisticsItem::after{
-    content: '';
-    position: absolute;
-    top: -15%;
-    left: 0%;
-    width: 20px;
-    height: 65px;
-    background: #F9BB88;
-}
-
-.aboutCompany__statisticsNumber{
-    text-align: center;
-    width: 50px;
-    font-size: 1.125rem;
-    font-weight: 700;
-    z-index: 1;
-}
-
-.aboutCompany__statisticsText{
-    text-align: left;
-    font-size: 1.125rem;
-    font-weight: 700;
-    width: 80%;
-}
-
-.advantages{
-    padding: 100px 12% 110px;
-    background-image: url(/content/decoration.svg), url(/content/decoration.svg);
-    background-repeat: no-repeat;
-    background-position: 5% 78%, 95% 17%;
-    position: absolute;
-    top: 10%;
-}
-
-.advantages__menu{
-    display: flex;
-    background: #FFF;
+    gap: 30px;
+    overflow-x: auto;
     z-index: 5;
-    position: relative;
 }
 
-.advantages__item{
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
+.typesOfStairs__item{
     border: 2px solid #F4F4F4;
-    padding: 40px 25px 40px 30px;
-    position: relative;
+    min-width: 31%;
+    background-color: #FFF;
 }
 
-.advantages__item::after{
-    content: '';
-    position: absolute;
-    top: 14%;
-    left: 6%;
-    width: 24px;
-    height: 78px;
-    background: #F9BB88;
+.typesOfStairs__staircaseImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 373px;
+    background-image: url(/content/typesOfStairs__decoration.svg);
+    background-repeat: no-repeat;
+    background-position: 83% 28%;
 }
 
-.advantages__item>img{
-    z-index: 1;
-}
-
-.advantages__text{
+.typesOfStairs__information{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    background: #F4F4F4;
+    gap: 20px;
+    padding: 20px 30px 40px;
 }
 
-.workPrinciples{
-    padding: 210px 12% 130px;
-}
-
-.workPrinciples__title{
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.workPrinciples__title::after{
-    content: '';
-    position: absolute;
-    top: 79%;
-    left: -3%;
-    width: 120px;
-    height: 18px;
-    background: #F9BB88;
-}
-
-.workPrinciples__list{
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.workPrinciples__item{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.workPrinciples__item>h3{
+.typesOfStairs__title{
     font-size: 1.44rem;
     font-weight: 600;
-    line-height: 160%;
-    color: #4B4B4B;
 }
 
-.workPrinciples__item>p{
-    color: #4B4B4B;
-    line-height: 160%;
+.typesOfStairs__name{
+    text-align: center;
+}
+
+.typesOfStairs__price{
+    font-size: 0.875rem;
+}
+
+.typesOfStairs__price span{
+    font-size: 1.44rem;
+    font-weight: 600;
+}
+
+.more{
+    width: 190px;
+    height: 50px;
+    font-size: 0.875rem;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    background: #FF9646;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.more:hover{
+    background-color: #202020;
+    color: white;
 }
 
 .promotion{
@@ -189,6 +118,7 @@ h2{
     background-image: url(/content/decoration.svg), url(/content/promotion__decoration.svg);
     background-repeat: no-repeat;
     background-position: 15% 27%, 9% 40%;
+    margin-top: 880px;
 }
 
 .promotion h2{
