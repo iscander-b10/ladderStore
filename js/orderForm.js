@@ -54,6 +54,10 @@ export const checkOrderForm = () => {
             };
         };
 
+        InputHeigh.value = "";
+        InputLenth.value = "";
+        InputWidth.value = "";
+
     });
         
     //step3

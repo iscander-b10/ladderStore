@@ -95,3 +95,23 @@ header{
     background-color: #202020;
     color: white;
 }
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 3px solid #F98C37;
+    margin-top: 25px;
+}
+
+.navigation__links:hover{
+    color: #FF9646;
+    transition: 0.2s;
+}
+
+.navigation__selected{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

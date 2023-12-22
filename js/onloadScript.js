@@ -51,6 +51,21 @@ function onload(){
 
     findModalWindow("closeStepTwo", "sizeOfStairs");
 
+    // const closeStepTwo = document.getElementById("closeStepTwo");
+    // closeStepTwo.addEventListener("click", () => {
+    //     toggleModal("sizeOfStairs");
+    //     const InputHeigh = document.getElementById('height');
+    //     InputHeigh.value = "";
+    //     InputHeigh.classList.remove("error");
+    //     const InputLenth = document.getElementById('length');
+    //     InputLenth.value = "";
+    //     InputLenth.classList.remove("error");
+    //     const InputWidth = document.getElementById('width');
+    //     InputWidth.value = "";
+    //     InputWidth.classList.remove("error");
+
+    // });
+
     // const nextTwo = document.getElementById("nextTwo");
     // nextTwo.addEventListener("click", () => {
     //     document.getElementById("sizeOfStairs").classList.remove("active");

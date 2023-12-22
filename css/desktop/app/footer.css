@@ -3,6 +3,7 @@ footer{
     flex-direction: column;
     gap: 20px;
     padding: 30px 12% 10px;
+    background-color: #F4F4F4;
 }
 
 .footer__nav{
