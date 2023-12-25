@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="/css/desktop/app/header.css">
+    <link rel="stylesheet" href="/css/desktop/mainPage/ContactsPage.css">
+    <link rel="stylesheet" href="/css/desktop/app/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="/content/header__logo.svg" alt="">
+                </a>
+                <ul class="header__title">
+                    <li class="header__title--txt">Проектирование</li>
+                    <li class="header__title--txt">Изготовление</li>
+                    <li class="header__title--txt">Монтаж</li>
+                </ul>
+            </div>
+            <ul class="header__menu">
+                <li class="header__item">
+                    <a href="#">О компании</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Каталог</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Примеры работ</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Блог</a>
+                </li>
+                <li class="header__item">
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="header__contacts">
+                <div class=phone>
+                    <a href="tel:+79302835065">+7 (930) 283-50-65</a>
+                </div>
+                <button class="callMeBack" id="callMeBack">Перезвоните мне!</button>
+            </div>
+        </nav>
+        <div class="navigation">
+            <div class="navigation__selected">
+                <a href="#" class="navigation__links">Главная</a>
+                <img src="/content/arrowRight.svg" alt="">
+                <a href="#" class="navigation__links">Контакты</a>
+            </div>
+            <a href="#" class="navigation__links">Вернуться на главную</a>
+        </div>
+    </header>
+    <main>
+        <section class="contacts">
+            <div class="contacts__title">
+                <h2 class="h2">Контакты</h2>
+            </div>
+            <div class="contacts__map">
+
+            </div>
+        </section>
+        <section class="ourContacts">
+            <ul class="ourContacts__menu">
+                <li class="ourContacts__item">
+                    <img src="/content/telephone.svg" class="opa" alt="">
+                    <div class="ourContacts__text">
+                        <h3 class="ourContacts__title">Телефон:</h3>
+                        <p class="ourContacts__subtitle">+7 (930) 283-50-65</p>
+                    </div>
+                <li class="ourContacts__item">
+                    <img src="/content/place.svg" alt="">
+                    <div class="ourContacts__text">
+                        <h3 class="ourContacts__title">Адрес:</h3>
+                        <p class="ourContacts__subtitle">г. Нижний Новгород <br> ул. Интернациональная, 100</p>
+                    </div>
+                <li class="ourContacts__item">
+                    <img src="/content/email.svg" alt="">
+                    <div class="ourContacts__text">
+                        <h3 class="ourContacts__title">E-mail:</h3>
+                        <p class="ourContacts__subtitle">lest52monolit@gmail.com</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="feedback">
+            <div class="feedback__image">
+                <img src="/content/house-in-mishref-studio.png" alt="">
+            </div>
+            <div class="feedback__content">
+                <div class="feedback__header">
+                    <h2>У вас остались <br> вопросы?</h2>
+                </div>
+                <p>Не нашли нужной информации? Интересует что-то конкретное? Напишите нам и наши специалисты ответят вам в течении 30 минут!</p>
+                <form action="#" method="post">
+                    <ul class="feedback__form">
+                        <li class="feedback__formItem">
+                            <p class="feedback__formName">Ваше  имя...</p>
+                            <input type="text" name="username" class="feedback__input">
+                        </li>
+                        <li class="feedback__formItem">
+                            <p class="feedback__formName">Ваш телефон...</p>
+                            <input type="tel" name="userphone" class="feedback__input">
+                        </li>
+                        <li class="feedback__formItem">
+                            <p class="feedback__formName">Ваш вопрос...</p>
+                            <input type="text" name="userquestion" class="feedback__input">
+                        </li>
+                    </ul>
+                </form>
+                <div>
+                    <button class="feedback__btn">Отправить сообщение</button>
+                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="feedbackPrivacyPolicy">политикой конфиденциальности</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer__nav">
+            <div class="footer__logo">
+                <div class="footer__logoTop">
+                    <a href="#">
+                        <img src="/content/footer__logo.svg" alt="">
+                    </a>
+                    <ul class="footer__title">
+                        <li class="footer__title--txt">Проектирование</li>
+                        <li class="footer__title--txt">Изготовление</li>
+                        <li class="footer__title--txt">Монтаж</li>
+                    </ul>
+                </div>
+                <p class="footer__logoDown">Монолитные лестницы</p>
+            </div>
+            <div class="footer__columns">
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a href="#">О компании</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Каталог</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Блог</a>
+                    </li>
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a href="#">Примеры работ</a>
+                    </li>
+                    
+                    <li class="footer__item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__contacts">
+                <div class=phone>
+                    <a href="tel:+79302835065">+7 (930) 283-50-65</a>
+                </div>
+                <button class="callMeBack" id="footer__callMeBack">Перезвоните мне!</button>
+            </div>
+        </nav>
+        <div class="footer__row">
+            <p>© 2020 Все права защищены.</p>
+            <ul class="footer__documentLinks">
+                <li id="conractOffer--btn">Договор оферты</li>
+                <li id="footerPrivacyPolicy" class="privacyPolicyText">Политика конфиденциальности</li>
+            </ul>
+            <img src="/content/social.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>
