@@ -226,9 +226,7 @@ h2{
     justify-content: center;
     align-items: center;
     height: 373px;
-    background-image: url(/content/typesOfStairs__decoration.svg),
-                      url(/content/typesOfStairs__decoration.svg),
-                      url(/content/typesOfStairs__decoration.svg);
+    background: url(/content/typesOfStairs__decoration.svg);
     background-repeat: no-repeat;
     background-position: 83% 28%;
 }

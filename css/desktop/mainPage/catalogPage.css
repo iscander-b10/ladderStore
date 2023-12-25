@@ -41,6 +41,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
     overflow-x: auto;
     z-index: 5;
@@ -286,14 +287,14 @@ h2{
     background: linear-gradient(to right, #F4F4F4 65%, #F9BB88 65%);
 }
 
-.reviews::before{
+.reviews::after{
     content: '';
     position: absolute; 
     width: 100%;
-    height: 100%;
+    height: 20%;
     background: url(/content/reviews__backgroundel1.svg), url(/content/reviews__backgroundel2.svg), url(/content/reviews__backgroundel3.svg);
     background-repeat: no-repeat;
-    background-position: 6% 42%, 70% 6%, 13% 33%;
+    background-position: 6% 88%, 70% 6%, 13% 68%;
 }
 
 .reviews__title{

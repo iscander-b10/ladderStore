@@ -1,0 +1,252 @@
+.workExamples{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 12%;
+}
+
+.workExamples__title{
+    position: relative;
+}
+
+.workExamples__title::after{
+    content: '';
+    position: absolute;
+    top: 57%;
+    left: -3%;
+    width: 120px;
+    height: 18px;
+    background: #FF9646;
+}
+
+h2{
+    font-size: 2.25rem;
+    font-weight: 700;
+    z-index: 1; 
+    position: relative;
+    line-height: 120%
+}
+
+.workExamples__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.typesOfStairs{
+    display: flex;
+    flex-direction: column;
+    padding: 0 12% 120px;
+}
+
+.typesOfStairs__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.typesOfStairs__header::after{
+    content: '';
+    position: absolute;
+    top: 59%;
+    left: -3%;
+    width: 120px;
+    height: 18px;
+    background: #FF9646;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75px;
+}
+
+.leftArrow{
+    width: 15px;
+    height: 15px;
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
+    transform: rotate(135deg);
+    cursor: pointer;
+}
+
+.delimiter{
+    height: 34px;
+    border: 2px solid #202020;
+}
+
+.rightArrow{
+    width: 15px;
+    height: 15px;
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.typesOfStairs__list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto;
+}
+
+.typesOfStairs__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.typesOfStairs__item{
+    border: 2px solid #F4F4F4;
+    min-width: 31%;
+}
+
+.typesOfStairs__staircaseImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 373px;
+    background: url(/content/typesOfStairs__decoration.svg);
+    background-repeat: no-repeat;
+    background-position: 83% 28%;
+}
+
+.typesOfStairs__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F4F4F4;
+    gap: 20px;
+    padding: 20px 30px 40px;
+}
+
+.typesOfStairs__title{
+    font-size: 1.44rem;
+    font-weight: 600;
+}
+
+.typesOfStairs__name{
+    text-align: center;
+}
+
+.typesOfStairs__price{
+    font-size: 0.875rem;
+}
+
+.typesOfStairs__price span{
+    font-size: 1.44rem;
+    font-weight: 600;
+}
+
+.more{
+    width: 190px;
+    height: 50px;
+    font-size: 0.875rem;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    background: #FF9646;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.more:hover{
+    background-color: #202020;
+    color: white;
+}
+
+.feedback{
+    display: flex;
+    gap: 135px;
+    padding: 110px 12% 110px 7%;
+}
+
+.feedback__map{
+    width: 52%;
+    height: 560px;
+    border: 8px solid #FDE4CF;
+}
+
+.feedback__content{
+    display: flex;
+    flex-direction: column;
+    width: 39%;
+}
+
+.feedback__header{
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.feedback__header::after{
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: -7%;
+    width: 120px;
+    height: 20px;
+    background: #F9BB88; 
+}
+
+.feedback__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.feedback__formItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.875rem;
+    line-height: 160%;
+}
+
+.feedback__input{
+    border: none;
+    border-bottom: 2px solid rgba(32, 32, 32, 0.40);
+    outline: none;
+}
+
+.feedback__btn{
+    width: 277px;
+    height: 50px;
+    background-color: #FF9646;
+    border: none;
+    border-radius: 4px;
+    color: #F4F4F4;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.feedback__btn:hover{
+    background-color: #202020;
+    color: white;
+}
+
+.privacyPolicyText--center{
+    text-align: center;
+    width: 277px;
+    margin-top: 10px;
+    color: rgba(32, 32, 32, 0.40);
+    font-size: 0.81rem;
+}
+
+.privacyPolicyText span {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.privacyPolicyText span:hover{
+    color: rgba(32, 32, 32, 0.7);
+}
