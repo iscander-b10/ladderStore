@@ -1,18 +1,15 @@
-main{
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 12%;
+}
+
+.card__title{
     position: relative;
 }
 
-.aboutCompany{
-    padding: 30px 12% 150px;
-    background: linear-gradient(to right, #F9BB88 38%,  #F4F4F4 38%);
-}
-
-.aboutCompany__title{
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.aboutCompany__title::after{
+.card__title::after{
     content: '';
     position: absolute;
     top: 57%;
@@ -30,84 +27,140 @@ h2{
     line-height: 120%
 }
 
-.aboutCompany__information{
+.card__info{
     display: flex;
-    justify-content: space-between;
-    gap: 85px;
+    gap: 50px;
 }
 
-.aboutCompany__informationTitle{
-    margin-bottom: 30px;
-    line-height: 160%;
-}
-
-.aboutCompany__informationItem:first-child{
-    width: 34%;
-}
-
-.aboutCompany__informationItem:nth-child(2){
-    width: 30%;
-}
-
-.aboutCompany__informationItem>img{
-    width: 100%;
-}
-
-.aboutCompany__statistics{
+.card__left-handSide{
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
-
-.aboutCompany__statisticsItem{
-    display: flex;
     align-items: center;
-    gap: 20px;
-    position: relative;
+    gap: 60px;
+    padding: 50px 0 0 25px;
 }
 
-.aboutCompany__statisticsItem::after{
-    content: '';
-    position: absolute;
-    top: -15%;
-    left: 0%;
-    width: 20px;
-    height: 65px;
-    background: #F9BB88;
+.delimiter{
+    width: 60%;
+    border: 2px solid #F4F4F4;
 }
 
-.aboutCompany__statisticsNumber{
-    text-align: center;
-    width: 50px;
-    font-size: 1.125rem;
+.selectionOfStairs{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 70px;
+    background-color: #202020;
+    font-size: 1.44rem;
+    color: #F4F4F4;
+    line-height: 140%;
+}
+
+.selectionOfStairs>p>span{
     font-weight: 700;
-    z-index: 1;
 }
 
-.aboutCompany__statisticsText{
-    text-align: left;
+.moreDetails{
+    width: 190px;
+    height: 50px;
+    border-radius: 4px;
+    background: #F4F4F4;
+    cursor: pointer;
+    color: #202020;
+    transition: 0.3s;
+}
+
+.moreDetails:hover{
+    background: #FF9646;
+}
+
+.card__right-handSide{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 0 0;
+    background: url(/content/card__right-handSide__background.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 8%;
+}
+
+.name{
+    font-size: 1.44rem;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.decorative{
+    width: 70px;
+    height: 3px;
+    background: #FF9646;
+    margin-bottom: 18px;
+}
+
+.price{
+    font-size: 1.44rem;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.text{
+    color: rgba(32, 32, 32, 0.40);
+    line-height: 140%;
+    margin-top: 22px;
+    margin-bottom: 27px;
+}
+
+.term{
     font-size: 1.125rem;
-    font-weight: 700;
-    width: 80%;
+    font-weight: 600;
+    margin-left: 10px;
 }
 
-.advantages{
-    padding: 100px 12% 110px;
+.submitApplication{
+    width: 210px;
+    height: 50px;
+    background-color: #FF9646;
+    border: none;
+    border-radius: 4px;
+    color: #F4F4F4;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+.submitApplication:hover{
+    background-color: #202020;
+    color: white;
+}
+
+.card__listText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 50px 0 20px;
+}
+
+.card__listText li{
+    list-style: disc;
+}
+
+.card__right-handSide>p:last-child{
+    margin-top: 20px;
+}
+
+.aboutUs{
+    padding: 140px 12% 125px;
     background-image: url(/content/decoration.svg), url(/content/decoration.svg);
     background-repeat: no-repeat;
-    background-position: 5% 78%, 95% 17%;
-    position: absolute;
-    top: 10%;
+    background-position: 5% 78%, 95% 22%;
 }
 
-.advantages__menu{
+.aboutUs__menu{
     display: flex;
-    background: #FFF;
-    z-index: 5;
-    position: relative;
 }
 
-.advantages__item{
+.aboutUs__item{
     display: flex;
     align-items: flex-start;
     gap: 30px;
@@ -116,7 +169,7 @@ h2{
     position: relative;
 }
 
-.advantages__item::after{
+.aboutUs__item::after{
     content: '';
     position: absolute;
     top: 14%;
@@ -126,57 +179,25 @@ h2{
     background: #F9BB88;
 }
 
-.advantages__item>img{
+.aboutUs__item img{
     z-index: 1;
 }
 
-.advantages__text{
+.aboutUs__text{
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.workPrinciples{
-    padding: 210px 12% 130px;
-}
-
-.workPrinciples__title{
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.workPrinciples__title::after{
-    content: '';
-    position: absolute;
-    top: 79%;
-    left: -3%;
-    width: 120px;
-    height: 18px;
-    background: #F9BB88;
-}
-
-.workPrinciples__list{
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.workPrinciples__item{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.workPrinciples__item>h3{
-    font-size: 1.44rem;
+.aboutUs__title{
+    font-size: 1.125rem;
     font-weight: 600;
-    line-height: 160%;
-    color: #4B4B4B;
+    line-height: 140%;
 }
 
-.workPrinciples__item>p{
-    color: #4B4B4B;
-    line-height: 160%;
+.aboutUs__subtitle{
+    font-size: 0.875rem;
+    line-height: 170%;
 }
 
 .promotion{
@@ -272,106 +293,155 @@ h2{
     color: rgba(32, 32, 32, 0.7);
 }
 
-.finishedProjects{
+.typesOfStairs{
     display: flex;
     flex-direction: column;
-    background-color: #FFF;
-    padding: 110px 12%;
+    padding: 110px 12% 120px;
 }
 
-.finishedProjects__title{
+.typesOfStairs__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     margin-bottom: 40px;
+    position: relative;
 }
 
-.finishedProjects__title::after{
+.typesOfStairs__header::after{
     content: '';
     position: absolute;
-    top: 58%;
+    top: 59%;
     left: -3%;
     width: 120px;
     height: 18px;
     background: #F9BB88;
 }
 
-.arrows {
+.arrows{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 75px;
 }
 
-.leftArrow {
+.leftArrow{
     width: 15px;
     height: 15px;
-    border-right: 3px solid rgb(32, 32, 32);
-    border-bottom: 3px solid rgb(32, 32, 32);
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
     transform: rotate(135deg);
     cursor: pointer;
 }
 
-.delimiter {
+.typesOfStairs__delimiter{
     height: 34px;
-    border: 2px solid rgb(32, 32, 32);
+    border: 2px solid #202020;
 }
 
-.rightArrow {
+.rightArrow{
     width: 15px;
     height: 15px;
-    border-right: 3px solid rgb(32, 32, 32);
-    border-bottom: 3px solid rgb(32, 32, 32);
+    border-right: 3px solid #202020;
+    border-bottom: 3px solid #202020;
     transform: rotate(-45deg);
     cursor: pointer;
 }
 
-.finishedProjects__menu{
+.typesOfStairs__list{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto;
 }
 
-.viewingWorks__btn{
-    width: 279px;
-    height: 50px;
-    border-radius: 4px;
-    background: #202020;
-    color: #FFF;
-    align-self: center;
-    margin-top: 30px;
-    transition: 0.3s;
-    cursor: pointer;
+.typesOfStairs__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
-.viewingWorks__btn:hover{
-    background: #FF9646;
-    border-color: #FF9646;
+.typesOfStairs__item{
+    border: 2px solid #F4F4F4;
+    min-width: 31%;
 }
 
-.reviews{
+.typesOfStairs__staircaseImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 373px;
+    background: url(/content/typesOfStairs__decoration.svg);
+    background-repeat: no-repeat;
+    background-position: 83% 28%;
+}
+
+.typesOfStairs__title{
     display: flex;
     flex-direction: column;
-    padding: 110px 12% 130px;
-    background: linear-gradient(to right, #F4F4F4 65%, #F9BB88 65%);
+    align-items: center;
+    background: #F4F4F4;
+    gap: 20px;
+    padding: 20px 30px 40px;
 }
 
-.reviews::before{
+.typesOfStairs__title{
+    font-size: 1.44rem;
+    font-weight: 600;
+}
+
+.typesOfStairs__name{
+    text-align: center;
+}
+
+.typesOfStairs__price{
+    font-size: 0.875rem;
+}
+
+.typesOfStairs__price span{
+    font-size: 1.44rem;
+    font-weight: 600;
+}
+
+.more{
+    width: 190px;
+    height: 50px;
+    font-size: 0.875rem;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    background: #FF9646;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.more:hover{
+    background-color: #202020;
+    color: white;
+}
+
+.laborAct{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 110px 12% 130px;
+    background-image: linear-gradient(to right, #F4F4F4 63%, #F9BB88 63%);
+    position: relative;
+}
+
+.laborAct::before{
     content: '';
     position: absolute; 
     width: 100%;
-    height: 20%;
-    background: url(/content/reviews__backgroundel1.svg), url(/content/reviews__backgroundel2.svg), url(/content/reviews__backgroundel3.svg);
-    background-repeat: no-repeat;
-    background-position: 6% 42%, 70% 6%, 13% 33%;
+    height: 100%;
+    background: url(/content/laborAct__decoration.svg) no-repeat 77% 16%;
 }
 
-.reviews__title{
+.laborAct__header{
     position: relative;
-    margin-bottom: 40px;
 }
 
-.reviews__title::after{
+.laborAct__header::after{
     content: '';
     position: absolute;
     top: 79%;
@@ -381,79 +451,47 @@ h2{
     background: #F9BB88;
 }
 
-.reviews__card{
+.laborAct__list{
     display: flex;
-    align-items: flex-start;
-    gap: 40px;
     align-self: center;
-    border: 2px solid #F4F4F4;
-    background: #FFF;
-    padding: 60px 80px 45px;
-    width: 60%;
+    gap: 5px;
+    background: #F4F4F4;
+}
+
+.laborAct__item{
+    display: flex;
+    flex-basis: 25%;
+    gap: 20px;
+    background-color: white;
+    padding: 40px 30px 40px 35px;
+    position: relative;
+}
+
+.laborAct__item::after{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 9%;
+    width: 20px;
+    height: 80px;
+    background: #F9BB88;
+}
+
+
+.laborAct__paragraph{
+    font-size: 2.25rem;
+    margin-top: 20px;
     z-index: 1;
 }
 
-.reviews__cardInformations{
-    display: flex;
-    flex-direction: column;
+.laborAct__text{
+    font-size: 0.875rem;
+    line-height: 170%;
 }
 
-.reviews__cardTopRow{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.reviews__cardpProfile{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.reviews__cardName{
+.laborAct__title{
     font-size: 1.125rem;
     font-weight: 700;
-}
-
-.reviews__cardHouseType{
-    color: rgba(32, 32, 32, 0.40);
-    font-size: 0.94rem;
-}
-
-.reviews__cardText{
-    line-height: 170%;
-    margin-bottom: 20px;
-}
-
-.readMore{
-    font-weight: 700;
-    letter-spacing: 0.7px;
-    cursor: pointer;
-    margin-bottom: 30px;
-    transition: 0.3s;
-}
-
-.readMore:hover{
-    color: #FF9646;
-}
-
-.reviews__cardPoints{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.reviews__cardPoint{
-    width: 10px;
-    height: 10px;
-    background-color: #F9BB88;
-}
-
-.reviews__cardPoint-active{
-    width: 15px;
-    height: 15px;
-    background-color: #202020;
 }
 
 .feedback{
