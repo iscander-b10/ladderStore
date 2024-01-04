@@ -33,7 +33,7 @@ body{
 
 header{
     width: 100%;
-    background: linear-gradient(to right, #F9BB88 38%,  #F4F4F4 38%);
+    background: linear-gradient(to right, #F9BB88 32%,  #F4F4F4 32%);
     padding: 0px 12%;
 }
 
@@ -57,7 +57,7 @@ header{
 .header__menu{
     display: flex;
     gap: 35px;
-    margin-left: 5%;
+    margin-left: 12%;
 }
 
 .header__item a:hover{
@@ -94,6 +94,19 @@ header{
 .callMeBack:hover{
     background-color: #202020;
     color: white;
+}
+
+.burgerMenu{
+    display: none;
+    background-image: url(/content/burgerMenu.svg);
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.burgerMenuRotate{
+    transform: rotate(90deg);
 }
 
 .navigation{

@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     gap: 100px;
-    padding: 80px 7% 100px 7%;
-    background: linear-gradient(to right, #F9BB88 38%,  #F4F4F4 38%);
+    padding: 80px 12% 100px 7%;
+    background: linear-gradient(to right, #F9BB88 32%,  #F4F4F4 32%);
 }
 
 .title__img{
-    width: 57%;
+    width: 100%;
 }
 
 .title__text{
@@ -55,7 +55,7 @@ h1{
 }
 
 .selectionOfStairs{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 80%;
@@ -110,13 +110,14 @@ h1{
     border: 2px solid #F4F4F4;
     padding: 40px 25px 40px 30px;
     position: relative;
+    background: white;
 }
 
 .aboutUs__item::after{
     content: '';
     position: absolute;
-    top: 14%;
-    left: 6%;
+    top: 30px;
+    left: 22px;
     width: 24px;
     height: 78px;
     background: #F9BB88;
@@ -218,7 +219,7 @@ h2{
 
 .typesOfStairs__item{
     border: 2px solid #F4F4F4;
-    min-width: 31%;
+    min-width: 32%;
 }
 
 .typesOfStairs__staircaseImage{
@@ -275,6 +276,22 @@ h2{
 .more:hover{
     background-color: #202020;
     color: white;
+}
+
+.typesOfStairs__cardPoints{
+    display: none;
+}
+
+.typesOfStairs__cardPoint{
+    width: 10px;
+    height: 10px;
+    background-color: #F9BB88;
+}
+
+.typesOfStairs__cardPoint-active{
+    width: 15px;
+    height: 15px;
+    background-color: #202020;
 }
 
 .promotion{
@@ -543,10 +560,10 @@ h2{
 
 .examples__navigation{
     display: flex;
+    background: linear-gradient(to right, black 42%, #F9BB88 42%);
 }
 
 .examples__arrows{
-    background-color: #202020;
     padding: 25px 65px 70px;
 }
 
@@ -669,7 +686,6 @@ h2{
 
 .laborAct__item{
     display: flex;
-    flex-basis: 25%;
     gap: 20px;
     background-color: white;
     padding: 40px 30px 40px 35px;
@@ -679,8 +695,8 @@ h2{
 .laborAct__item::after{
     content: '';
     position: absolute;
-    top: 20%;
-    left: 9%;
+    top: 40px;
+    left: 28px;
     width: 20px;
     height: 80px;
     background: #F9BB88;
