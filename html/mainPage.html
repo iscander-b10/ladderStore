@@ -13,18 +13,19 @@
     <link rel="stylesheet" href="/css/mobile/products/headerMobile.css">
     <link rel="stylesheet" href="/css/mobile/mainPage/mainPageMobile.css">
     <link rel="stylesheet" href="/css/mobile/products/footerMobile.css">
-    <script src="/data/privacyPolicyContent.js" type="module"></script>
+    <!-- <script src="/data/privacyPolicyContent.js" type="module"></script>
     <script src="/data/contractOfferContent.js" type="module"></script>
     <script src="/js/pasteContentInBlock.js" type="module"></script>
-    <script src="/js/toggleModal.js" type="module"></script>
+    <script src="/js/toggleModal.js" type="module"></script> -->
     <script src="/js/formVerification.js" type="module"></script>
     <script src="/js/onloadScript.js" type="module"></script>
+    <script src="/js/toggleModalMainPage.js" type="module"></script>
 </head>
 <body>
     <header>
         <nav class="header__nav">
             <div class="header__logo">
-                <a href="#">
+                <a href="/html/mainPage.html">
                     <img src="/content/header__logo.svg" alt="">
                 </a>
                 <ul class="header__title">
@@ -35,32 +36,30 @@
             </div>
             <ul class="header__menu">
                 <li class="header__item">
-                    <a href="#">О компании</a>
+                    <a href="/html/aboutCompanyPage.html">О компании</a>
                 </li>
                 <li class="header__item">
-                    <a href="#">Каталог</a>
+                    <a href="/html/catalogPage.html">Каталог</a>
                 </li>
                 <li class="header__item">
-                    <a href="#">Примеры работ</a>
+                    <a href="/html/workExamplesPage.html">Примеры работ</a>
                 </li>
                 <li class="header__item">
-                    <a href="#">Блог</a>
+                    <a href="/html/blogPage.html">Блог</a>
                 </li>
                 <li class="header__item">
-                    <a href="#">Контакты</a>
+                    <a href="/html/contactsPage.html">Контакты</a>
                 </li>
             </ul>
             <div class="header__contacts">
                 <div class=phone>
                     <a href="tel:+79302835065">+7 (930) 283-50-65</a>
                 </div>
-                <button class="callMeBack" id="callMeBack">Перезвоните мне!</button>
+                <button class="callMeBack" id="callMeBackMainPage">Перезвоните мне!</button>
             </div>
             <div class="burgerMenu"></div>
         </nav>
-    </header>
-    <main>
-        <div class="application__wrapper" id="application">
+        <div class="application__wrapper" id="applicationMainPage">
             <div class="application">
                 <div class="application__header">
                     <p class="application__title">Отправить заявку</p>
@@ -90,26 +89,28 @@
                             <input type="text" name="usermail" class="application__input" id="usermail">
                         </li>
                     </ul>
-                    <button class="application__btn" id="application__btn" type="button">Отправить заявку</button>
+                    <button class="application__btn" id="applicationBtnMainPage" type="button">Отправить заявку</button>
                 </form>
-                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="applicationPrivacyPolicy"> политикой конфиденциальности </span></p>
-                <div class="close" id="closeApplicationWindow">
+                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="privacyPolicyApplicationMainPage"> политикой конфиденциальности </span></p>
+                <div class="close" id="closeApplicationMainPage">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
         </div>
-        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfully">
+        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfullyMainPage">
             <div class="applicationSuccessfully">
                 <div class="application__header">
                     <p class="application__title">Спасибо!</p>
                 </div>
                 <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
                 <img src="/content/successfully.svg" alt="">
-                <div class="close" id="closeApplicationSuccessfully">
+                <div class="close" id="closeApplicationSuccessfullyMainPage">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
         </div>
+    </header>
+    <main>
         <section class="title">
             <img src="/content/mainPage__title.png" alt="" class="title__img">
             <div class="title__text">
@@ -277,7 +278,7 @@
             </form>
             <div class="promotion__sendAnApplication">
                 <input type="submit" value="Отправить заявку" class="sendAnApplication"/>
-                <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="promotionPrivacyPolicy">политикой <br> конфиденциальности</span></p>
+                <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="privacyPolicyPromotionMainPage">политикой <br> конфиденциальности</span></p>
             </div>
         </section>
         <div class="privacyPolicy__wrapper" id="privacyPolicy__wrapper">
@@ -449,7 +450,7 @@
                 </form>
                 <div>
                     <button class="feedback__btn">Отправить сообщение</button>
-                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="feedbackPrivacyPolicy">политикой конфиденциальности</span></p>
+                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="privacyPolicyFeedbackMainPage">политикой конфиденциальности</span></p>
                 </div>
             </div>
         </section>
@@ -684,7 +685,7 @@
                     <h4 class="contractOffer__title">Договор оферты</h4>
                 </div>
                 <pre id="contractOffer__content" class="contractOffer__content"></pre>
-                <div class="close" id="closeContractOffer">
+                <div class="close" id="closeContractOfferMainPage">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
@@ -694,7 +695,7 @@
         <nav class="footer__nav">
             <div class="footer__logo">
                 <div class="footer__logoTop">
-                    <a href="#">
+                    <a href="/html/mainPage.html">
                         <img src="/content/footer__logo.svg" alt="">
                     </a>
                     <ul class="footer__title">
@@ -708,22 +709,22 @@
             <div class="footer__columns">
                 <ul class="footer__menu">
                     <li class="footer__item">
-                        <a href="#">О компании</a>
+                        <a href="/html/aboutCompanyPage.html">О компании</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#">Каталог</a>
+                        <a href="/html/catalogPage.html">Каталог</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#">Блог</a>
+                        <a href="/html/blogPage.html">Блог</a>
                     </li>
                 </ul>
                 <ul class="footer__menu">
                     <li class="footer__item">
-                        <a href="#">Примеры работ</a>
+                        <a href="/html/workExamplesPage.html">Примеры работ</a>
                     </li>
                     
                     <li class="footer__item">
-                        <a href="#">Контакты</a>
+                        <a href="/html/contactsPage.html">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -731,14 +732,14 @@
                 <div class=phone>
                     <a href="tel:+79302835065">+7 (930) 283-50-65</a>
                 </div>
-                <button class="callMeBack" id="footer__callMeBack">Перезвоните мне!</button>
+                <button class="callMeBack" id="footerCallMeBackMainPage">Перезвоните мне!</button>
             </div>
         </nav>
         <div class="footer__row">
             <p>© 2020 Все права защищены.</p>
             <ul class="footer__documentLinks">
-                <li id="conractOffer--btn">Договор оферты</li>
-                <li id="footerPrivacyPolicy" class="privacyPolicyText">Политика конфиденциальности</li>
+                <li id="conractOfferMainPage">Договор оферты</li>
+                <li id="privacyPolicyFooterMainPage" class="privacyPolicyText">Политика конфиденциальности</li>
             </ul>
             <img src="/content/social.svg" alt="">
         </div>
