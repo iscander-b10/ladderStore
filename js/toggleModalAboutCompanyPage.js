@@ -12,7 +12,7 @@ export function toggleModalAboutCompanyPage(){
         button.addEventListener("click", () => toggleModal(idModalWindow));
     };
 
-    findModalWindow("callMeBack", "application");
+    findModalWindow("callMeBackAboutPage", "application");
     findModalWindow("closeApplication", "application");
     
     const applicationSentSuccessfully = document.getElementById("application__btn");
@@ -35,10 +35,10 @@ export function toggleModalAboutCompanyPage(){
 
     findModalWindow("feedbackPrivacyPolicy", "privacyPolicy__wrapper");
 
-    findModalWindow("conractOffer", "contractOffer__wrapper");
+    findModalWindow("conractOffer--btn", "contractOffer__wrapper");
     findModalWindow("closeContractOffer", "contractOffer__wrapper");
 
-    findModalWindow("privacyPolicyFooter", "privacyPolicy__wrapper");
+    findModalWindow("footerPrivacyPolicy", "privacyPolicy__wrapper");
 
-    findModalWindow("footerCallMeBack", "application");
+    findModalWindow("footer__callMeBack", "application");
 }
