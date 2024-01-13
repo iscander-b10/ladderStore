@@ -55,11 +55,11 @@
                 <div class=phone>
                     <a href="tel:+79302835065">+7 (930) 283-50-65</a>
                 </div>
-                <button class="callMeBack" id="callMeBackMainPage">Перезвоните мне!</button>
+                <button class="callMeBack" id="callMeBack">Перезвоните мне!</button>
             </div>
             <div class="burgerMenu"></div>
         </nav>
-        <div class="application__wrapper" id="applicationMainPage">
+        <div class="application__wrapper" id="application">
             <div class="application">
                 <div class="application__header">
                     <p class="application__title">Отправить заявку</p>
@@ -89,22 +89,22 @@
                             <input type="text" name="usermail" class="application__input" id="usermail">
                         </li>
                     </ul>
-                    <button class="application__btn" id="applicationBtnMainPage" type="button">Отправить заявку</button>
+                    <button class="application__btn" id="application__btn" type="button">Отправить заявку</button>
                 </form>
-                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="privacyPolicyApplicationMainPage"> политикой конфиденциальности </span></p>
-                <div class="close" id="closeApplicationMainPage">
+                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="applicationPrivacyPolicy"> политикой конфиденциальности </span></p>
+                <div class="close" id="closeApplication">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
         </div>
-        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfullyMainPage">
+        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfully">
             <div class="applicationSuccessfully">
                 <div class="application__header">
                     <p class="application__title">Спасибо!</p>
                 </div>
                 <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
                 <img src="/content/successfully.svg" alt="">
-                <div class="close" id="closeApplicationSuccessfullyMainPage">
+                <div class="close" id="closeApplicationSuccessfully">
                     <img src="/content/close.svg" alt="">
                 </div>
             </div>
@@ -278,7 +278,7 @@
             </form>
             <div class="promotion__sendAnApplication">
                 <input type="submit" value="Отправить заявку" class="sendAnApplication"/>
-                <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="privacyPolicyPromotionMainPage">политикой <br> конфиденциальности</span></p>
+                <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="promotionPrivacyPolicy">политикой <br> конфиденциальности</span></p>
             </div>
         </section>
         <div class="privacyPolicy__wrapper" id="privacyPolicy__wrapper">
@@ -450,7 +450,7 @@
                 </form>
                 <div>
                     <button class="feedback__btn">Отправить сообщение</button>
-                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="privacyPolicyFeedbackMainPage">политикой конфиденциальности</span></p>
+                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="feedbackPrivacyPolicy">политикой конфиденциальности</span></p>
                 </div>
             </div>
         </section>
@@ -679,17 +679,6 @@
                 </div>
             </div>
         </div>
-        <div class="contractOffer__wrapper" id="contractOffer__wrapper">
-            <div class="contractOffer">
-                <div class="contractOffer__header">
-                    <h4 class="contractOffer__title">Договор оферты</h4>
-                </div>
-                <pre id="contractOffer__content" class="contractOffer__content"></pre>
-                <div class="close" id="closeContractOfferMainPage">
-                    <img src="/content/close.svg" alt="">
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         <nav class="footer__nav">
@@ -732,16 +721,27 @@
                 <div class=phone>
                     <a href="tel:+79302835065">+7 (930) 283-50-65</a>
                 </div>
-                <button class="callMeBack" id="footerCallMeBackMainPage">Перезвоните мне!</button>
+                <button class="callMeBack" id="footerCallMeBack">Перезвоните мне!</button>
             </div>
         </nav>
         <div class="footer__row">
             <p>© 2020 Все права защищены.</p>
             <ul class="footer__documentLinks">
-                <li id="conractOfferMainPage">Договор оферты</li>
-                <li id="privacyPolicyFooterMainPage" class="privacyPolicyText">Политика конфиденциальности</li>
+                <li id="conractOffer">Договор оферты</li>
+                <li id="privacyPolicyFooter" class="privacyPolicyText">Политика конфиденциальности</li>
             </ul>
             <img src="/content/social.svg" alt="">
+        </div>
+        <div class="contractOffer__wrapper" id="contractOffer__wrapper">
+            <div class="contractOffer">
+                <div class="contractOffer__header">
+                    <h4 class="contractOffer__title">Договор оферты</h4>
+                </div>
+                <pre id="contractOffer__content" class="contractOffer__content"></pre>
+                <div class="close" id="closeContractOffer">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
         </div>
     </footer>
 </body>

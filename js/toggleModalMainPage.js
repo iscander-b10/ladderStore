@@ -12,33 +12,33 @@ export function toggleModalMainPage(){
         button.addEventListener("click", () => toggleModal(idModalWindow));
     };
 
-    findModalWindow("callMeBackMainPage", "applicationMainPage");
-    findModalWindow("closeApplicationMainPage", "applicationMainPage");
+    findModalWindow("callMeBack", "application");
+    findModalWindow("closeApplication", "application");
     
-    const applicationSentSuccessfully = document.getElementById("applicationBtnMainPage");
+    const applicationSentSuccessfully = document.getElementById("application__btn");
     applicationSentSuccessfully.addEventListener("click", () => {
-        toggleModal("applicationMainPage");
-        toggleModal("applicationSuccessfullyMainPage");
+        toggleModal("application");
+        toggleModal("applicationSuccessfully");
     });
 
-    findModalWindow("closeApplicationSuccessfullyMainPage", "applicationSuccessfullyMainPage");
+    findModalWindow("closeApplicationSuccessfully", "applicationSuccessfully");
     
-    const openApplicationPrivacyPolicy = document.getElementById("privacyPolicyApplicationMainPage");
+    const openApplicationPrivacyPolicy = document.getElementById("applicationPrivacyPolicy");
     openApplicationPrivacyPolicy.addEventListener("click", () => {
         toggleModal("privacyPolicy__wrapper");
-        toggleModal("applicationMainPage");
+        toggleModal("application");
     });
 
     findModalWindow("closePrivacyPolicy", "privacyPolicy__wrapper");
 
-    findModalWindow("privacyPolicyPromotionMainPage", "privacyPolicy__wrapper");
+    findModalWindow("promotionPrivacyPolicy", "privacyPolicy__wrapper");
 
-    findModalWindow("privacyPolicyFeedbackMainPage", "privacyPolicy__wrapper");
+    findModalWindow("feedbackPrivacyPolicy", "privacyPolicy__wrapper");
 
-    findModalWindow("conractOfferMainPage", "contractOffer__wrapper");
-    findModalWindow("closeContractOfferMainPage", "contractOffer__wrapper");
+    findModalWindow("conractOffer", "contractOffer__wrapper");
+    findModalWindow("closeContractOffer", "contractOffer__wrapper");
 
-    findModalWindow("privacyPolicyFooterMainPage", "privacyPolicy__wrapper");
+    findModalWindow("privacyPolicyFooter", "privacyPolicy__wrapper");
 
-    findModalWindow("footerCallMeBackMainPage", "applicationMainPage");
+    findModalWindow("footerCallMeBack", "application");
 }
