@@ -33,8 +33,13 @@ body{
 
 header{
     width: 100%;
-    background: linear-gradient(to right, #F9BB88 32%,  #F4F4F4 32%);
-    padding: 0px 12%;
+    background: linear-gradient(to right, #F9BB88 36%,  #F4F4F4 36%);
+}
+
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header__nav{
@@ -57,7 +62,10 @@ header{
 .header__menu{
     display: flex;
     gap: 35px;
-    margin-left: 12%;
+}
+
+.header__item{
+    text-align: center;
 }
 
 .header__item a:hover{

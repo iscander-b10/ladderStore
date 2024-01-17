@@ -1,0 +1,200 @@
+@media screen and (max-width: 1700px){
+    .title{
+        padding-bottom: 90px;
+        padding-top: 140px;
+    }   
+}
+
+@media screen and (max-width: 1400px){
+    .title{
+        padding-bottom: 40px;
+        padding-top: 110px;
+    } 
+}
+
+@media screen and (max-width: 1150px){
+    .title{
+        padding-bottom: 30px;
+        padding-top: 60px;
+    } 
+
+    .selectionOfStairs{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .title__container{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .title__containerImg{
+        position: static;
+        width: 100%;
+    }
+
+    .selectionOfStairs{
+        position: absolute;
+        bottom: -175px;
+        left: 33%;
+        width: 40%;
+    }
+
+    .title__text{
+        width: 50%;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .title__text{
+        width: 62%;
+    }
+
+    h1{
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .selectionOfStairs{
+        left: 25%;
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .selectionOfStairs{
+        width: 54%;
+    }
+}
+
+@media screen and (max-width: 625px){
+    .selectionOfStairs {
+        width: 60%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 565px){
+    .selectionOfStairs {
+        width: 67%;
+        left: 19%;
+    }
+}
+
+@media screen and (max-width: 505px){
+    .selectionOfStairs {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .aboutUs {
+        padding-top: 270px;
+    }
+    
+    .aboutUs__menu{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .typesOfStairs__item{
+        min-width: 48%;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .typesOfStairs__item{
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .promotion__form{
+        flex-direction: column;
+    }
+
+    .promotion__sendAnApplication{
+        flex-direction: column;
+    }
+
+    .privacyPolicyText{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .advantage__information{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .advantage__text, .advantage__ourSpecialization, .advantage__information>img{
+        width: 100%;
+    }
+
+    .advantage__item::after{
+        left: -1%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .examples__container{
+        flex-direction: column;
+    }
+
+    .examples__arrows{
+        display: none;
+    }
+
+    .examples__navigation{
+        align-self: center;
+        padding: 45px;
+        background: #F4F4F4;
+    }
+
+    .examples__point{
+        background: #F9BB88;
+    }
+
+    .examples__point_active{
+        background: #202020;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .excellence__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .excellence__list{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .laborAct__list{
+        flex-direction: column;
+        position: static;
+    }
+
+    .laborAct__item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .feedback__map{
+        display: none;
+    }
+
+    .feedback__content{
+        width: 100%;
+        align-items: center;
+    }
+}

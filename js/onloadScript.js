@@ -2,6 +2,10 @@ import { scrollOfStairs } from "../js/scrollOfStairs.js";
 import { checkOrderForm } from "../js/orderForm.js";
 import { toggleModalMainPage } from "./toggleModalMainPage.js";
 import { toggleModalAboutCompanyPage } from "../js/toggleModalAboutCompanyPage.js";
+import {toggleModalCatalogPage} from "../js/toggleModalCatalogPage.js";
+import {toggleModalWorkExamplesPage} from "../js/toggleModalWorkExamplesPage.js";
+import {toggleModalBlogPage} from "../js/toggleModalBlogPage.js";
+import {toggleModalContactsPage} from "../js/toggleModalContactsPage.js";
 
 function onload() {
     if (location.pathname.includes("mainPage")) {
@@ -33,6 +37,22 @@ function onload() {
 
     if (location.pathname.includes("aboutCompanyPage")) {
         toggleModalAboutCompanyPage();
+    }
+
+    if (location.pathname.includes("catalogPage")) {
+        toggleModalCatalogPage();
+    }
+
+    if (location.pathname.includes("workExamplesPage")) {
+        toggleModalWorkExamplesPage();
+    }
+
+    if (location.pathname.includes("blogPage")) {
+        toggleModalBlogPage();
+    }
+
+    if (location.pathname.includes("contactsPage")) {
+        toggleModalContactsPage();
     }
 }
 

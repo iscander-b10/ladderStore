@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Блог</title>
-    <link rel="stylesheet" href="/css/desktop/app/header.css">
-    <link rel="stylesheet" href="/css/desktop/mainPage/blogPage.css">
-    <link rel="stylesheet" href="/css/desktop/app/footer.css">
+    <link rel="stylesheet" href="/css/desktop/header.css">
+    <link rel="stylesheet" href="/css/desktop/blogPage.css">
+    <link rel="stylesheet" href="/css/desktop/footer.css">
+    <link rel="stylesheet" href="/css/desktop/app/application.css">
+    <link rel="stylesheet" href="/css/desktop/app/privacyPolicy&&ContractOffer.css">
+    <script src="/js/onloadScript.js" type="module"></script>
+    <script src="/js/toggleModalBlogPage.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -52,6 +56,56 @@
                 <a href="/html/blogPage.html" class="navigation__links">Блог</a>
             </div>
             <a href="/html/mainPage.html" class="navigation__links">Вернуться на главную</a>
+        </div>
+        <div class="application__wrapper" id="application">
+            <div class="application">
+                <div class="application__header">
+                    <p class="application__title">Отправить заявку</p>
+                </div>
+                <p class="application__subtitle">на бесплатную консультацию</p>
+                <form action="#" method="post" id="application__form">
+                    <ul class="application__list">
+                        <li class="application__item">
+                            <div class="application__topRow">
+                                <label for="username">Ваше  имя...</label>
+                                <img src="/content/application__check.svg" alt="">
+                            </div>
+                            <input type="text" name="username" class="application__input" id="username">
+                        </li>
+                        <li class="application__item">
+                            <div class="application__topRow">
+                                <label for="tel">Ваш телефон...</label>
+                                <img src="/content/application__check.svg" alt="">
+                            </div>
+                            <input type="tel" name="userphone" class="application__input" id="tel">
+                        </li>
+                        <li class="application__item">
+                            <div class="application__topRow">
+                                <label for="usermail">Ваш e-mail...</label>
+                                <img src="/content/application__check.svg" alt="">
+                            </div>
+                            <input type="text" name="usermail" class="application__input" id="usermail">
+                        </li>
+                    </ul>
+                    <button class="application__btn" id="application__btn" type="button">Отправить заявку</button>
+                </form>
+                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="applicationPrivacyPolicy"> политикой конфиденциальности </span></p>
+                <div class="close" id="closeApplication">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfully">
+            <div class="applicationSuccessfully">
+                <div class="application__header">
+                    <p class="application__title">Спасибо!</p>
+                </div>
+                <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
+                <img src="/content/successfully.svg" alt="">
+                <div class="close" id="closeApplicationSuccessfully">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -301,6 +355,17 @@
                 </div>
             </div>
         </section>
+        <div class="privacyPolicy__wrapper" id="privacyPolicy__wrapper">
+            <div class="privacyPolicy">
+                <div class="privacyPolicy__header">
+                    <h4 class="privacyPolicy__title">Политика конфиденциальности</h4>
+                </div>
+                <pre id="privacyPolicy__content" class="privacyPolicy__content"></pre>
+                <div class="close" id="closePrivacyPolicy">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <nav class="footer__nav">
@@ -353,6 +418,17 @@
                 <li id="footerPrivacyPolicy" class="privacyPolicyText">Политика конфиденциальности</li>
             </ul>
             <img src="/content/social.svg" alt="">
+        </div>
+        <div class="contractOffer__wrapper" id="contractOffer__wrapper">
+            <div class="contractOffer">
+                <div class="contractOffer__header">
+                    <h4 class="contractOffer__title">Договор оферты</h4>
+                </div>
+                <pre id="contractOffer__content" class="contractOffer__content"></pre>
+                <div class="close" id="closeContractOffer">
+                    <img src="/content/close.svg" alt="">
+                </div>
+            </div>
         </div>
     </footer>
 </body>
