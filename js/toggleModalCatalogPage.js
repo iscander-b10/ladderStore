@@ -34,10 +34,10 @@ export function toggleModalCatalogPage(){
     findModalWindow("promotionPrivacyPolicy", "privacyPolicy__wrapper");
     findModalWindow("feedbackPrivacyPolicy", "privacyPolicy__wrapper");
 
-    findModalWindow("conractOffer--btn", "contractOffer__wrapper");
+    findModalWindow("conractOffer", "contractOffer__wrapper");
     findModalWindow("closeContractOffer", "contractOffer__wrapper");
 
-    findModalWindow("footerPrivacyPolicy", "privacyPolicy__wrapper");
+    findModalWindow("privacyPolicyFooter", "privacyPolicy__wrapper");
 
-    findModalWindow("footer__callMeBack", "application");
+    findModalWindow("footerCallMeBack", "application");
 }

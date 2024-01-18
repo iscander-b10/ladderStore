@@ -1,18 +1,11 @@
-header{
-    padding-bottom: 480px;
-}
-
-main{
-    position: relative;
-}
-
 .typesOfStairs{
+    padding: 30px 0 110px;
+}
+
+.typesOfStairs__container{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 30px 12% 110px;
-    position: absolute;
-    top: -47%;
 }
 
 .typesOfStairs__title{
@@ -119,7 +112,6 @@ h2{
     background-image: url(/content/decoration.svg), url(/content/promotion__decoration.svg);
     background-repeat: no-repeat;
     background-position: 15% 27%, 9% 40%;
-    margin-top: 880px;
 }
 
 .promotion h2{
@@ -204,10 +196,13 @@ h2{
 }
 
 .finishedProjects{
+    background-color: #FFF;
+    padding: 110px 0 110px;
+}
+
+.finishedProjects__container{
     display: flex;
     flex-direction: column;
-    background-color: #FFF;
-    padding: 110px 12%;
 }
 
 .finishedProjects__title{
@@ -263,6 +258,11 @@ h2{
     justify-content: space-around;
 }
 
+.finishedProjects__img{
+    background-size: contain;
+    width: 100%;
+}
+
 .viewingWorks__btn{
     width: 279px;
     height: 50px;
@@ -281,11 +281,15 @@ h2{
 }
 
 .reviews{
-    display: flex;
-    flex-direction: column;
-    padding: 110px 12% 130px;
+    padding: 110px 0 130px;
     background: linear-gradient(to right, #F4F4F4 65%, #F9BB88 65%);
 }
+
+.reviews__container{
+    display: flex;
+    flex-direction: column;
+}
+
 
 .reviews::after{
     content: '';
@@ -320,7 +324,7 @@ h2{
     border: 2px solid #F4F4F4;
     background: #FFF;
     padding: 60px 80px 45px;
-    width: 60%;
+    width: 90%;
     z-index: 1;
 }
 
@@ -388,15 +392,23 @@ h2{
 }
 
 .feedback{
-    display: flex;
-    gap: 135px;
-    padding: 110px 12% 110px 7%;
+    padding: 110px 0 110px;
+    position: relative;
 }
 
-.feedback__map{
-    width: 52%;
+.feedback__container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 135px;
+}
+
+.feedback__image{
+    width: 46%;
     height: 560px;
-    border: 8px solid #FDE4CF;
+    position: absolute;
+    top: 12%;
+    left: 7%;
+    background-size: contain;
 }
 
 .feedback__content{

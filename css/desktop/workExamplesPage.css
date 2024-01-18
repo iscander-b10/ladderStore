@@ -1,8 +1,11 @@
 .workExamples{
+    padding-bottom: 130px;
+}
+
+.workExamples__container{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 0 12%;
 }
 
 .workExamples__title{
@@ -34,9 +37,12 @@ h2{
 }
 
 .typesOfStairs{
+    padding-bottom: 120px;
+}
+
+.typesOfStairs__container{
     display: flex;
     flex-direction: column;
-    padding: 0 12% 120px;
 }
 
 .typesOfStairs__header{
@@ -161,15 +167,23 @@ h2{
 }
 
 .feedback{
-    display: flex;
-    gap: 135px;
-    padding: 110px 12% 110px 7%;
+    padding: 110px 0 110px;
+    position: relative;
 }
 
-.feedback__map{
-    width: 52%;
+.feedback__container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 135px;
+}
+
+.feedback__image{
+    width: 46%;
     height: 560px;
-    border: 8px solid #FDE4CF;
+    position: absolute;
+    top: 12%;
+    left: 7%;
+    background-size: contain;
 }
 
 .feedback__content{

@@ -1,0 +1,71 @@
+@media screen and (max-width: 999px){
+    .card__info{
+        flex-direction: column;
+    }
+
+    .card__left-handSide>img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .aboutUs {
+        padding-top: 270px;
+    }
+    
+    .aboutUs__menu{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .promotion__form{
+        flex-direction: column;
+    }
+
+    .promotion__sendAnApplication{
+        flex-direction: column;
+    }
+
+    .privacyPolicyText{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .typesOfStairs__item{
+        min-width: 48%;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .typesOfStairs__item{
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .laborAct__list{
+        flex-direction: column;
+        position: static;
+    }
+
+    .laborAct__item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .feedback__image{
+        display: none;
+    }
+
+    .feedback__content{
+        width: 100%;
+        align-items: center;
+    }
+
+    .feedback__container{
+        flex-direction: column;
+    }
+}

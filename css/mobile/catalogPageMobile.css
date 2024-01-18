@@ -1,0 +1,46 @@
+@media screen and (max-width: 999px){
+    .typesOfStairs__item{
+        min-width: 48%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .typesOfStairs__item{
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .promotion__form{
+        flex-direction: column;
+    }
+
+    .promotion__sendAnApplication{
+        flex-direction: column;
+    }
+
+    .privacyPolicyText{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .arrows{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .feedback__image{
+        display: none;
+    }
+
+    .feedback__content{
+        width: 100%;
+        align-items: center;
+    }
+
+    .feedback__container{
+        flex-direction: column;
+    }
+}

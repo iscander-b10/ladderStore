@@ -9,292 +9,312 @@
     <link rel="stylesheet" href="/css/desktop/footer.css">
     <link rel="stylesheet" href="/css/desktop/app/application.css">
     <link rel="stylesheet" href="/css/desktop/app/privacyPolicy&&ContractOffer.css">
+    <link rel="stylesheet" href="/css/mobile/headerMobile.css">
+    <link rel="stylesheet" href="/css/mobile/aboutCompanyPageMobile.css">
+    <link rel="stylesheet" href="/css/mobile/footerMobile.css">
     <script src="/js/onloadScript.js" type="module"></script>
     <script src="/js/toggleModalAboutCompanyPage.js" type="module"></script>
 </head>
 <body>
     <header>
-        <nav class="header__nav">
-            <div class="header__logo">
-                <a href="/html/mainPage.html">
-                    <img src="/content/header__logo.svg" alt="">
-                </a>
-                <ul class="header__title">
-                    <li class="header__title--txt">Проектирование</li>
-                    <li class="header__title--txt">Изготовление</li>
-                    <li class="header__title--txt">Монтаж</li>
-                </ul>
-            </div>
-            <ul class="header__menu">
-                <li class="header__item">
-                    <a href="/html/aboutCompanyPage.html">О компании</a>
-                </li>
-                <li class="header__item">
-                    <a href="/html/catalogPage.html">Каталог</a>
-                </li>
-                <li class="header__item">
-                    <a href="/html/workExamplesPage.html">Примеры работ</a>
-                </li>
-                <li class="header__item">
-                    <a href="/html/blogPage.html">Блог</a>
-                </li>
-                <li class="header__item">
-                    <a href="/html/contactsPage.html">Контакты</a>
-                </li>
-            </ul>
-            <div class="header__contacts">
-                <div class=phone>
-                    <a href="tel:+79302835065">+7 (930) 283-50-65</a>
-                </div>
-                <button class="callMeBack" id="callMeBack">Перезвоните мне!</button>
-            </div>
-        </nav>
-        <div class="navigation">
-            <div class="navigation__selected">
-                <a href="/html/mainPage.html" class="navigation__links">Главная</a>
-                <img src="/content/arrowRight.svg" alt="">
-                <a href="/html/aboutCompanyPage.html" class="navigation__links">О компании</a>
-            </div>
-            <a href="/html/mainPage.html" class="navigation__links">Вернуться на главную</a>
-        </div>
-        <div class="application__wrapper" id="application">
-            <div class="application">
-                <div class="application__header">
-                    <p class="application__title">Отправить заявку</p>
-                </div>
-                <p class="application__subtitle">на бесплатную консультацию</p>
-                <form action="#" method="post" id="application__form">
-                    <ul class="application__list">
-                        <li class="application__item">
-                            <div class="application__topRow">
-                                <label for="username">Ваше  имя...</label>
-                                <img src="/content/application__check.svg" alt="">
-                            </div>
-                            <input type="text" name="username" class="application__input" id="username">
-                        </li>
-                        <li class="application__item">
-                            <div class="application__topRow">
-                                <label for="tel">Ваш телефон...</label>
-                                <img src="/content/application__check.svg" alt="">
-                            </div>
-                            <input type="tel" name="userphone" class="application__input" id="tel">
-                        </li>
-                        <li class="application__item">
-                            <div class="application__topRow">
-                                <label for="usermail">Ваш e-mail...</label>
-                                <img src="/content/application__check.svg" alt="">
-                            </div>
-                            <input type="text" name="usermail" class="application__input" id="usermail">
-                        </li>
+        <div class="container">
+            <nav class="header__nav">
+                <div class="header__logo">
+                    <a href="/html/mainPage.html">
+                        <img src="/content/header__logo.svg" alt="">
+                    </a>
+                    <ul class="header__title">
+                        <li class="header__title--txt">Проектирование</li>
+                        <li class="header__title--txt">Изготовление</li>
+                        <li class="header__title--txt">Монтаж</li>
                     </ul>
-                    <button class="application__btn" id="application__btn" type="button">Отправить заявку</button>
-                </form>
-                <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="applicationPrivacyPolicy"> политикой конфиденциальности </span></p>
-                <div class="close" id="closeApplication">
-                    <img src="/content/close.svg" alt="">
+                </div>
+                <ul class="header__menu">
+                    <li class="header__item">
+                        <a href="/html/aboutCompanyPage.html">О компании</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/html/catalogPage.html">Каталог</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/html/workExamplesPage.html">Примеры работ</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/html/blogPage.html">Блог</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/html/contactsPage.html">Контакты</a>
+                    </li>
+                </ul>
+                <div class="header__contacts">
+                    <div class=phone>
+                        <a href="tel:+79302835065">+7 (930) 283-50-65</a>
+                    </div>
+                    <button class="callMeBack" id="callMeBack">Перезвоните мне!</button>
+                </div>
+                <div class="burgerMenu"></div>
+            </nav>
+            <div class="navigation">
+                <div class="navigation__selected">
+                    <a href="/html/mainPage.html" class="navigation__links">Главная</a>
+                    <img src="/content/arrowRight.svg" alt="">
+                    <a href="/html/aboutCompanyPage.html" class="navigation__links">О компании</a>
+                </div>
+                <a href="/html/mainPage.html" class="navigation__links">Вернуться на главную</a>
+            </div>
+            <div class="application__wrapper" id="application">
+                <div class="application">
+                    <div class="application__header">
+                        <p class="application__title">Отправить заявку</p>
+                    </div>
+                    <p class="application__subtitle">на бесплатную консультацию</p>
+                    <form action="#" method="post" id="application__form">
+                        <ul class="application__list">
+                            <li class="application__item">
+                                <div class="application__topRow">
+                                    <label for="username">Ваше  имя...</label>
+                                    <img src="/content/application__check.svg" alt="">
+                                </div>
+                                <input type="text" name="username" class="application__input" id="username">
+                            </li>
+                            <li class="application__item">
+                                <div class="application__topRow">
+                                    <label for="tel">Ваш телефон...</label>
+                                    <img src="/content/application__check.svg" alt="">
+                                </div>
+                                <input type="tel" name="userphone" class="application__input" id="tel">
+                            </li>
+                            <li class="application__item">
+                                <div class="application__topRow">
+                                    <label for="usermail">Ваш e-mail...</label>
+                                    <img src="/content/application__check.svg" alt="">
+                                </div>
+                                <input type="text" name="usermail" class="application__input" id="usermail">
+                            </li>
+                        </ul>
+                        <button class="application__btn" id="application__btn" type="button">Отправить заявку</button>
+                    </form>
+                    <p class="privacyPolicyText">Нажимая на кнопку вы соглашаетесь <br> с <span id="applicationPrivacyPolicy"> политикой конфиденциальности </span></p>
+                    <div class="close" id="closeApplication">
+                        <img src="/content/close.svg" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="applicationSuccessfully__wrapper" id="applicationSuccessfully">
-            <div class="applicationSuccessfully">
-                <div class="application__header">
-                    <p class="application__title">Спасибо!</p>
-                </div>
-                <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
-                <img src="/content/successfully.svg" alt="">
-                <div class="close" id="closeApplicationSuccessfully">
-                    <img src="/content/close.svg" alt="">
+            <div class="applicationSuccessfully__wrapper" id="applicationSuccessfully">
+                <div class="applicationSuccessfully">
+                    <div class="application__header">
+                        <p class="application__title">Спасибо!</p>
+                    </div>
+                    <p class="application__subtitle">Заявка успешно <br> отправлена.</p>
+                    <img src="/content/successfully.svg" alt="">
+                    <div class="close" id="closeApplicationSuccessfully">
+                        <img src="/content/close.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <section class="aboutCompany">
-            <div class="aboutCompany__title">
-                <h2>О компании</h2>
-            </div>
-            <ul class="aboutCompany__information">
-                <li class="aboutCompany__informationItem">
-                    <img src="/content/banner.png" alt="">
-                </li>
-                <li class="aboutCompany__informationItem">
-                    <h3 class="aboutCompany__informationTitle">Мы воплощаем ваши <br> идеи в реальность</h3>
-                    <p>Популярность монолитных лестничных систем 
-                        из железобетона в современном строительстве очень высока. Когда решите заказать эксклюзивную бетонную лестницу, главное — не ошибиться с выбором ее изготовителя. 
-                        Отдав предпочтение компании «Лесенка 52», 
-                        вы найдете в нашем лице надежного партнера, 
-                        с отличной репутацией, предлагающего лучшие в регионе качество и расценки.
-                        <br>
-                        <br>
-                        Популярность монолитных лестничных систем 
-                        из железобетона в современном строительстве очень высока.</p>
-                </li>
-                <li class="aboutCompany__informationItem">
-                    <h3 class="aboutCompany__informationTitle">Наша деятельность <br> в цифрах:</h3>
-                    <ul class="aboutCompany__statistics">
-                        <li class="aboutCompany__statisticsItem">
-                            <p class="aboutCompany__statisticsNumber">&lt; 15 <br> лет</p>
-                            <p class="aboutCompany__statisticsText">Надежной работы</p>
-                        </li>
-                        <li class="aboutCompany__statisticsItem">
-                            <p class="aboutCompany__statisticsNumber">более <br> 358</p>
-                            <p class="aboutCompany__statisticsText">Довольных клиентов</p>
-                        </li>
-                        <li class="aboutCompany__statisticsItem">
-                            <p class="aboutCompany__statisticsNumber">более <br>  423</p>
-                            <p class="aboutCompany__statisticsText">Проектов выполнено</p>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section class="advantages">
-            <ul class="advantages__menu">
-                <li class="advantages__item">
-                    <img src="/content/reliability.svg" class="opa" alt="">
-                    <div class="advantages__text">
-                        <h3 class="advantages__title">Надежность <br> и гарантия</h3>
-                        <p class="advantages__subtitle">Срок службы конструкций изготовленных нашей компанией исчисляется десятками лет.</p>
-                    </div>
-                <li class="advantages__item">
-                    <img src="/content/speed.svg" alt="">
-                    <div class="advantages__text">
-                        <h3 class="advantages__title">Скорость <br> работы</h3>
-                        <p class="advantages__subtitle">В кратчайшие сроки осуществляем проектирование, изготовление и монтаж монолитных лестниц.</p>
-                    </div>
-                <li class="advantages__item">
-                    <img src="/content/free.svg" alt="">
-                    <div class="advantages__text">
-                        <h3 class="advantages__title">Бесплатный <br> замер</h3>
-                        <p class="advantages__subtitle">Выезд специалиста компании на замер и расчет стоимости будущей конструкции — за наш счет.</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="workPrinciples">
-            <div class="workPrinciples__title">
-                <h2>Основные принципы <br> в работе</h2>
-            </div>
-            <ul class="workPrinciples__list">
-                <li class="workPrinciples__item">
-                    <h3>Комплексный подход <br> на каждом этапе</h3>
-                    <p>Все работы по изготовлению монолитных железобетонных лестниц наша компания выполняет комплексно — начиная с проекта лестницы, подготовки всех нужных материалов, ее изготовления и заканчивая техническим надзором за этапами монтажа.</p>
-                </li>
-                <li class="workPrinciples__item">
-                    <h3>Ориентированность <br> на конечного пользователя</h3>
-                    <p>При составлении проекта будущей лестницы мы учитываем множество связанных между собой факторов, влияющих на удобство последующего использования лестницы. Конечно не забывая о пожеланиях заказчика и последних мировых тенденциях в области технологий строительства.</p>
-                </li>
-                <li class="workPrinciples__item">
-                    <h3>Профессионализм <br> и качество</h3>
-                    <p>За время работы мы сумели зарекомендовать себя исключительно с положительной стороны, а список довольных клиентов постоянно пополняется. О чем свидетельствуют многочисленные позитивные отзывы клиентов на сайте, форумах в интернете, обсуждениях в социальных сетях.</p>
-                </li>
-            </ul>
-        </section>
-        <section class="promotion">
-            <h2>Получите 3d-визуализацию <br> вашей будущей лестницы бесплатно!</h2>
-            <p class="promotion__subtitle">Оставьте свои контактные данные и наш специалист <br> свяжется свами в течении 15 минут!</p>
-            <form action="#" method="post">
-                <ul class="promotion__form">
-                    <li class="promotion__formItem">
-                        <p class="promotion__formName">Ваше  имя...</p>
-                        <input type="text" name="username" class="promotion__input">
+            <div class="container aboutCompany__container">
+                <div class="aboutCompany__title">
+                    <h2>О компании</h2>
+                </div>
+                <ul class="aboutCompany__information">
+                    <li class="aboutCompany__informationItem">
+                        <img src="/content/banner.png" alt="">
                     </li>
-                    <li class="promotion__formItem">
-                        <p class="promotion__formName">Ваш телефон...</p>
-                        <input type="tel" name="userphone" class="promotion__input">
+                    <li class="aboutCompany__informationItem">
+                        <h3 class="aboutCompany__informationTitle">Мы воплощаем ваши <br> идеи в реальность</h3>
+                        <p>Популярность монолитных лестничных систем 
+                            из железобетона в современном строительстве очень высока. Когда решите заказать эксклюзивную бетонную лестницу, главное — не ошибиться с выбором ее изготовителя. 
+                            Отдав предпочтение компании «Лесенка 52», 
+                            вы найдете в нашем лице надежного партнера, 
+                            с отличной репутацией, предлагающего лучшие в регионе качество и расценки.
+                            <br>
+                            <br>
+                            Популярность монолитных лестничных систем 
+                            из железобетона в современном строительстве очень высока.</p>
                     </li>
-                    <li class="promotion__formItem">
-                        <p class="promotion__formName">Ваш e-mail...</p>
-                        <input type="text" name="usermail" class="promotion__input">
+                    <li class="aboutCompany__informationItem">
+                        <h3 class="aboutCompany__informationTitle">Наша деятельность <br> в цифрах:</h3>
+                        <ul class="aboutCompany__statistics">
+                            <li class="aboutCompany__statisticsItem">
+                                <p class="aboutCompany__statisticsNumber">&lt; 15 <br> лет</p>
+                                <p class="aboutCompany__statisticsText">Надежной работы</p>
+                            </li>
+                            <li class="aboutCompany__statisticsItem">
+                                <p class="aboutCompany__statisticsNumber">более <br> 358</p>
+                                <p class="aboutCompany__statisticsText">Довольных клиентов</p>
+                            </li>
+                            <li class="aboutCompany__statisticsItem">
+                                <p class="aboutCompany__statisticsNumber">более <br>  423</p>
+                                <p class="aboutCompany__statisticsText">Проектов выполнено</p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-            </form>
-            <div class="promotion__sendAnApplication">
-                <input type="submit" value="Отправить заявку" class="sendAnApplication"/>
-                <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="promotionPrivacyPolicy">политикой <br> конфиденциальности</span></p>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <ul class="advantages__menu">
+                    <li class="advantages__item">
+                        <img src="/content/reliability.svg" class="opa" alt="">
+                        <div class="advantages__text">
+                            <h3 class="advantages__title">Надежность <br> и гарантия</h3>
+                            <p class="advantages__subtitle">Срок службы конструкций изготовленных нашей компанией исчисляется десятками лет.</p>
+                        </div>
+                    <li class="advantages__item">
+                        <img src="/content/speed.svg" alt="">
+                        <div class="advantages__text">
+                            <h3 class="advantages__title">Скорость <br> работы</h3>
+                            <p class="advantages__subtitle">В кратчайшие сроки осуществляем проектирование, изготовление и монтаж монолитных лестниц.</p>
+                        </div>
+                    <li class="advantages__item">
+                        <img src="/content/free.svg" alt="">
+                        <div class="advantages__text">
+                            <h3 class="advantages__title">Бесплатный <br> замер</h3>
+                            <p class="advantages__subtitle">Выезд специалиста компании на замер и расчет стоимости будущей конструкции — за наш счет.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="workPrinciples">
+            <div class="container workPrinciples__container">
+                <div class="workPrinciples__title">
+                    <h2>Основные принципы <br> в работе</h2>
+                </div>
+                <ul class="workPrinciples__list">
+                    <li class="workPrinciples__item">
+                        <h3>Комплексный подход <br> на каждом этапе</h3>
+                        <p>Все работы по изготовлению монолитных железобетонных лестниц наша компания выполняет комплексно — начиная с проекта лестницы, подготовки всех нужных материалов, ее изготовления и заканчивая техническим надзором за этапами монтажа.</p>
+                    </li>
+                    <li class="workPrinciples__item">
+                        <h3>Ориентированность <br> на конечного пользователя</h3>
+                        <p>При составлении проекта будущей лестницы мы учитываем множество связанных между собой факторов, влияющих на удобство последующего использования лестницы. Конечно не забывая о пожеланиях заказчика и последних мировых тенденциях в области технологий строительства.</p>
+                    </li>
+                    <li class="workPrinciples__item">
+                        <h3>Профессионализм <br> и качество</h3>
+                        <p>За время работы мы сумели зарекомендовать себя исключительно с положительной стороны, а список довольных клиентов постоянно пополняется. О чем свидетельствуют многочисленные позитивные отзывы клиентов на сайте, форумах в интернете, обсуждениях в социальных сетях.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="promotion">
+            <div class="container promotion__container">
+                <h2>Получите 3d-визуализацию <br> вашей будущей лестницы бесплатно!</h2>
+                <p class="promotion__subtitle">Оставьте свои контактные данные и наш специалист <br> свяжется свами в течении 15 минут!</p>
+                <form action="#" method="post">
+                    <ul class="promotion__form">
+                        <li class="promotion__formItem">
+                            <p class="promotion__formName">Ваше  имя...</p>
+                            <input type="text" name="username" class="promotion__input">
+                        </li>
+                        <li class="promotion__formItem">
+                            <p class="promotion__formName">Ваш телефон...</p>
+                            <input type="tel" name="userphone" class="promotion__input">
+                        </li>
+                        <li class="promotion__formItem">
+                            <p class="promotion__formName">Ваш e-mail...</p>
+                            <input type="text" name="usermail" class="promotion__input">
+                        </li>
+                    </ul>
+                </form>
+                <div class="promotion__sendAnApplication">
+                    <input type="submit" value="Отправить заявку" class="sendAnApplication"/>
+                    <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="promotionPrivacyPolicy">политикой <br> конфиденциальности</span></p>
+                </div>
             </div>
         </section>
         <section class="finishedProjects">
-            <div class="finishedProjects__title">
-                <h2>Готовые проекты</h2>
-                <div class="arrows">
-                    <div class="leftArrow"></div>
-                    <div class="delimiter"></div>
-                    <div class="rightArrow"></div>
+            <div class="container finishedProjects__container">
+                <div class="finishedProjects__title">
+                    <h2>Готовые проекты</h2>
+                    <div class="arrows">
+                        <div class="leftArrow"></div>
+                        <div class="delimiter"></div>
+                        <div class="rightArrow"></div>
+                    </div>
                 </div>
+                <ul class="finishedProjects__menu">
+                    <li>
+                        <img src="/content/project1.png" alt="" class="finishedProjects__img">
+                    </li>
+                    <li>
+                        <img src="/content/project2.png" alt="" class="finishedProjects__img">
+                    </li>
+                    <li>
+                        <img src="/content/project3.png" alt="" class="finishedProjects__img">
+                    </li>
+                </ul>
+                <button class="viewingWorks__btn">Посмотреть все работы</button>
             </div>
-            <ul class="finishedProjects__menu">
-                <li>
-                    <img src="/content/project1.png" alt="">
-                </li>
-                <li>
-                    <img src="/content/project2.png" alt="">
-                </li>
-                <li>
-                    <img src="/content/project3.png" alt="">
-                </li>
-            </ul>
-            <button class="viewingWorks__btn">Посмотреть все работы</button>
         </section>
         <section class="reviews">
-            <div class="reviews__title">
-                <h2>Отзывы о нашей <br> работе</h2>
-            </div>
-            <div class="reviews__card">
-                <img src="/content/SergeyPolozovAvatar.png" alt="">
-                <div class="reviews__cardInformations">
-                    <div class="reviews__cardTopRow">
-                        <div class="reviews__cardpProfile">
-                            <p class="reviews__cardName">Сергей Полозов</p>
-                            <p class="reviews__cardHouseType">Частный дом</p>
+            <div class="container reviews__container">
+                <div class="reviews__title">
+                    <h2>Отзывы о нашей <br> работе</h2>
+                </div>
+                <div class="reviews__card">
+                    <img src="/content/SergeyPolozovAvatar.png" alt="">
+                    <div class="reviews__cardInformations">
+                        <div class="reviews__cardTopRow">
+                            <div class="reviews__cardpProfile">
+                                <p class="reviews__cardName">Сергей Полозов</p>
+                                <p class="reviews__cardHouseType">Частный дом</p>
+                            </div>
+                            <div class="arrows">
+                                <div class="leftArrow"></div>
+                                <div class="delimiter"></div>
+                                <div class="rightArrow"></div>
+                            </div>
                         </div>
-                        <div class="arrows">
-                            <div class="leftArrow"></div>
-                            <div class="delimiter"></div>
-                            <div class="rightArrow"></div>
-                        </div>
+                        <p class="reviews__cardText">Добрый день! Хочу поблагодарить за отличную работу. Заказ был выполнен точно в оговоренный срок. Ребята работают грамотно, быстро и профессионально. Учитывают все особенности и пожелания заказчика. Большое спасибо!!!</p>
+                        <span class="readMore">ЧИТАТЬ ДАЛЕЕ</span>
+                        <ul class="reviews__cardPoints">
+                            <li class="reviews__cardPoint"></li>
+                            <li class="reviews__cardPoint reviews__cardPoint-active"></li>
+                            <li class="reviews__cardPoint"></li>
+                            <li class="reviews__cardPoint"></li>
+                        </ul>
                     </div>
-                    <p class="reviews__cardText">Добрый день! Хочу поблагодарить за отличную работу. Заказ был выполнен точно в оговоренный срок. Ребята работают грамотно, быстро и профессионально. Учитывают все особенности и пожелания заказчика. Большое спасибо!!!</p>
-                    <span class="readMore">ЧИТАТЬ ДАЛЕЕ</span>
-                    <ul class="reviews__cardPoints">
-                        <li class="reviews__cardPoint"></li>
-                        <li class="reviews__cardPoint reviews__cardPoint-active"></li>
-                        <li class="reviews__cardPoint"></li>
-                        <li class="reviews__cardPoint"></li>
-                    </ul>
                 </div>
             </div>
         </section>
         <section class="feedback">
-            <div class="feedback__image">
-                <img src="/content/house-in-mishref-studio.png" alt="">
-            </div>
-            <div class="feedback__content">
-                <div class="feedback__header">
-                    <h2>У вас остались <br> вопросы?</h2>
-                </div>
-                <p>Не нашли нужной информации? Интересует что-то конкретное? Напишите нам и наши специалисты ответят вам в течении 30 минут!</p>
-                <form action="#" method="post">
-                    <ul class="feedback__form">
-                        <li class="feedback__formItem">
-                            <p class="feedback__formName">Ваше  имя...</p>
-                            <input type="text" name="username" class="feedback__input">
-                        </li>
-                        <li class="feedback__formItem">
-                            <p class="feedback__formName">Ваш телефон...</p>
-                            <input type="tel" name="userphone" class="feedback__input">
-                        </li>
-                        <li class="feedback__formItem">
-                            <p class="feedback__formName">Ваш вопрос...</p>
-                            <input type="text" name="userquestion" class="feedback__input">
-                        </li>
-                    </ul>
-                </form>
+            <div class="container feedback__container">
                 <div>
-                    <button class="feedback__btn">Отправить сообщение</button>
-                    <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="feedbackPrivacyPolicy">политикой конфиденциальности</span></p>
+                    <img src="/content/house-in-mishref-studio.png" alt="" class="feedback__image">
                 </div>
-            </div>  
+                <div class="feedback__content">
+                    <div class="feedback__header">
+                        <h2>У вас остались <br> вопросы?</h2>
+                    </div>
+                    <p>Не нашли нужной информации? Интересует что-то конкретное? Напишите нам и наши специалисты ответят вам в течении 30 минут!</p>
+                    <form action="#" method="post">
+                        <ul class="feedback__form">
+                            <li class="feedback__formItem">
+                                <p class="feedback__formName">Ваше  имя...</p>
+                                <input type="text" name="username" class="feedback__input">
+                            </li>
+                            <li class="feedback__formItem">
+                                <p class="feedback__formName">Ваш телефон...</p>
+                                <input type="tel" name="userphone" class="feedback__input">
+                            </li>
+                            <li class="feedback__formItem">
+                                <p class="feedback__formName">Ваш вопрос...</p>
+                                <input type="text" name="userquestion" class="feedback__input">
+                            </li>
+                        </ul>
+                    </form>
+                    <div>
+                        <button class="feedback__btn">Отправить сообщение</button>
+                        <p class="privacyPolicyText privacyPolicyText--center">Нажимая на кнопку вы соглашаетесь <br> с <span id="feedbackPrivacyPolicy">политикой конфиденциальности</span></p>
+                    </div>
+                </div> 
+            </div> 
         </section>
         <div class="contractOffer__wrapper" id="contractOffer__wrapper">
             <div class="contractOffer">
@@ -331,65 +351,66 @@
         </div>  
     </main>
     <footer>
-        <nav class="footer__nav">
-            <div class="footer__logo">
-                <div class="footer__logoTop">
-                    <a href="/html/mainPage.html">
-                        <img src="/content/footer__logo.svg" alt="">
-                    </a>
-                    <ul class="footer__title">
-                        <li class="footer__title--txt">Проектирование</li>
-                        <li class="footer__title--txt">Изготовление</li>
-                        <li class="footer__title--txt">Монтаж</li>
+        <div class="container footer__container">
+            <nav class="footer__nav">
+                <div class="footer__logo">
+                    <div class="footer__logoTop">
+                        <a href="/html/mainPage.html">
+                            <img src="/content/footer__logo.svg" alt="">
+                        </a>
+                        <ul class="footer__title">
+                            <li class="footer__title--txt">Проектирование</li>
+                            <li class="footer__title--txt">Изготовление</li>
+                            <li class="footer__title--txt">Монтаж</li>
+                        </ul>
+                    </div>
+                    <p class="footer__logoDown">Монолитные лестницы</p>
+                </div>
+                <div class="footer__columns">
+                    <ul class="footer__menu">
+                        <li class="footer__item">
+                            <a href="/html/aboutCompanyPage.html">О компании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/html/catalogPage.html">Каталог</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/html/blogPage.html">Блог</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu">
+                        <li class="footer__item">
+                            <a href="/html/workExamplesPage.html">Примеры работ</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/html/contactsPage.html">Контакты</a>
+                        </li>
                     </ul>
                 </div>
-                <p class="footer__logoDown">Монолитные лестницы</p>
-            </div>
-            <div class="footer__columns">
-                <ul class="footer__menu">
-                    <li class="footer__item">
-                        <a href="/html/aboutCompanyPage.html">О компании</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="/html/catalogPage.html">Каталог</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="/html/blogPage.html">Блог</a>
-                    </li>
-                </ul>
-                <ul class="footer__menu">
-                    <li class="footer__item">
-                        <a href="/html/workExamplesPage.html">Примеры работ</a>
-                    </li>
-                    
-                    <li class="footer__item">
-                        <a href="/html/contactsPage.html">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__contacts">
-                <div class=phone>
-                    <a href="tel:+79302835065">+7 (930) 283-50-65</a>
+                <div class="footer__contacts">
+                    <div class=phone>
+                        <a href="tel:+79302835065">+7 (930) 283-50-65</a>
+                    </div>
+                    <button class="callMeBack" id="footerCallMeBack">Перезвоните мне!</button>
                 </div>
-                <button class="callMeBack" id="footer__callMeBack">Перезвоните мне!</button>
+            </nav>
+            <div class="footer__row">
+                <p>© 2020 Все права защищены.</p>
+                <ul class="footer__documentLinks">
+                    <li id="conractOffer">Договор оферты</li>
+                    <li id="privacyPolicyFooter" class="privacyPolicyText">Политика конфиденциальности</li>
+                </ul>
+                <img src="/content/social.svg" alt="">
             </div>
-        </nav>
-        <div class="footer__row">
-            <p>© 2020 Все права защищены.</p>
-            <ul class="footer__documentLinks">
-                <li id="conractOffer--btn">Договор оферты</li>
-                <li id="footerPrivacyPolicy" class="privacyPolicyText">Политика конфиденциальности</li>
-            </ul>
-            <img src="/content/social.svg" alt="">
-        </div>
-        <div class="contractOffer__wrapper" id="contractOffer__wrapper">
-            <div class="contractOffer">
-                <div class="contractOffer__header">
-                    <h4 class="contractOffer__title">Договор оферты</h4>
-                </div>
-                <pre id="contractOffer__content" class="contractOffer__content"></pre>
-                <div class="close" id="closeContractOffer">
-                    <img src="/content/close.svg" alt="">
+            <div class="contractOffer__wrapper" id="contractOffer__wrapper">
+                <div class="contractOffer">
+                    <div class="contractOffer__header">
+                        <h4 class="contractOffer__title">Договор оферты</h4>
+                    </div>
+                    <pre id="contractOffer__content" class="contractOffer__content"></pre>
+                    <div class="close" id="closeContractOffer">
+                        <img src="/content/close.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

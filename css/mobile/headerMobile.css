@@ -16,4 +16,8 @@
     .burgerMenu{
         display: flex;
     }
+
+    .navigation{
+        display: none;
+    }
 }

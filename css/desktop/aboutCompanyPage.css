@@ -3,13 +3,18 @@ main{
 }
 
 .aboutCompany{
-    padding: 30px 12% 150px;
-    background: linear-gradient(to right, #F9BB88 38%,  #F4F4F4 38%);
+    padding: 30px 0 70px;
+    background: linear-gradient(to right, #F9BB88 36%,  #F4F4F4 36%);
+}
+
+.aboutCompany__container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .aboutCompany__title{
     position: relative;
-    margin-bottom: 40px;
 }
 
 .aboutCompany__title::after{
@@ -92,12 +97,10 @@ h2{
 }
 
 .advantages{
-    padding: 100px 12% 110px;
+    padding: 80px 0 50px;
     background-image: url(/content/decoration.svg), url(/content/decoration.svg);
     background-repeat: no-repeat;
-    background-position: 5% 78%, 95% 17%;
-    position: absolute;
-    top: 10%;
+    background-position: 9% 98%, 91% 2%;
 }
 
 .advantages__menu{
@@ -137,12 +140,17 @@ h2{
 }
 
 .workPrinciples{
-    padding: 210px 12% 130px;
+    padding: 70px 0 130px;
+}
+
+.workPrinciples__container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .workPrinciples__title{
     position: relative;
-    margin-bottom: 40px;
 }
 
 .workPrinciples__title::after{
@@ -180,15 +188,18 @@ h2{
 }
 
 .promotion{
+    background: #F4F4F4;;
+    padding: 70px 0 80px;
+    background-image: url(/content/decoration.svg), url(/content/promotion__decoration.svg);
+    background-repeat: no-repeat;
+    background-position: 15% 27%, 9% 40%;
+}
+
+.promotion__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #F4F4F4;;
-    padding: 70px 12% 80px;
-    background-image: url(/content/decoration.svg), url(/content/promotion__decoration.svg);
-    background-repeat: no-repeat;
-    background-position: 15% 27%, 9% 40%;
 }
 
 .promotion h2{
@@ -273,10 +284,13 @@ h2{
 }
 
 .finishedProjects{
+    background-color: #FFF;
+    padding: 110px 0 110px;
+}
+
+.finishedProjects__container{
     display: flex;
     flex-direction: column;
-    background-color: #FFF;
-    padding: 110px 12%;
 }
 
 .finishedProjects__title{
@@ -329,7 +343,12 @@ h2{
 
 .finishedProjects__menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.finishedProjects__img{
+    background-size: contain;
+    width: 100%;
 }
 
 .viewingWorks__btn{
@@ -350,20 +369,23 @@ h2{
 }
 
 .reviews{
+    padding: 110px 0 130px;
+    background: linear-gradient(to right, #F4F4F4 65%, #F9BB88 65%);
+}
+
+.reviews__container{
     display: flex;
     flex-direction: column;
-    padding: 110px 12% 130px;
-    background: linear-gradient(to right, #F4F4F4 65%, #F9BB88 65%);
 }
 
 .reviews::before{
     content: '';
     position: absolute; 
     width: 100%;
-    height: 20%;
+    height: 14%;
     background: url(/content/reviews__backgroundel1.svg), url(/content/reviews__backgroundel2.svg), url(/content/reviews__backgroundel3.svg);
     background-repeat: no-repeat;
-    background-position: 6% 42%, 70% 6%, 13% 33%;
+    background-position: 6% 42%, 77% 6%, 13% 33%;
 }
 
 .reviews__title{
@@ -389,7 +411,7 @@ h2{
     border: 2px solid #F4F4F4;
     background: #FFF;
     padding: 60px 80px 45px;
-    width: 60%;
+    width: 90%;
     z-index: 1;
 }
 
@@ -457,15 +479,23 @@ h2{
 }
 
 .feedback{
-    display: flex;
-    gap: 135px;
-    padding: 110px 12% 110px 7%;
+    padding: 110px 0 110px;
+    position: relative;
 }
 
-.feedback__map{
-    width: 52%;
+.feedback__container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 135px;
+}
+
+.feedback__image{
+    width: 46%;
     height: 560px;
-    border: 8px solid #FDE4CF;
+    position: absolute;
+    top: 12%;
+    left: 7%;
+    background-size: contain;
 }
 
 .feedback__content{

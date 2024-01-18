@@ -1,0 +1,64 @@
+@media screen and (max-width: 999px){
+    .aboutCompany__information{
+        flex-direction: column;
+    }
+
+    .aboutCompany__informationItem:first-child{
+        width: 100%;
+    }
+
+    .aboutCompany__informationItem:nth-child(2){
+        width: 100%;
+    }
+
+    .aboutCompany__informationItem:last-child{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .advantages__menu{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .workPrinciples__list{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .promotion__form{
+        flex-direction: column;
+    }
+
+    .promotion__sendAnApplication{
+        flex-direction: column;
+    }
+
+    .privacyPolicyText{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .arrows{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .feedback__image{
+        display: none;
+    }
+
+    .feedback__content{
+        width: 100%;
+        align-items: center;
+    }
+
+    .feedback__container{
+        flex-direction: column;
+    }
+}

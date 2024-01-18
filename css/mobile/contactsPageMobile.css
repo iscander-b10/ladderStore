@@ -1,0 +1,24 @@
+@media screen and (max-width: 999px){
+    .ourContacts__menu{
+        flex-direction: column;
+    }
+
+    .ourContacts__item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .feedback__image{
+        display: none;
+    }
+
+    .feedback__content{
+        width: 100%;
+        align-items: center;
+    }
+
+    .feedback__container{
+        flex-direction: column;
+    }
+}

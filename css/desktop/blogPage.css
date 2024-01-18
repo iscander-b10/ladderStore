@@ -1,8 +1,11 @@
 .card{
+    padding-top: 50px;
+}
+
+.card__container{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 0 12%;
 }
 
 .card__title{
@@ -153,7 +156,7 @@ h2{
     padding: 140px 12% 125px;
     background-image: url(/content/decoration.svg), url(/content/decoration.svg);
     background-repeat: no-repeat;
-    background-position: 5% 78%, 95% 22%;
+    background-position: 9% 80%, 91% 20%;
 }
 
 .aboutUs__menu{
@@ -201,15 +204,18 @@ h2{
 }
 
 .promotion{
+    background: #F4F4F4;;
+    padding: 70px 0 80px;
+    background-image: url(/content/decoration.svg), url(/content/promotion__decoration.svg);
+    background-repeat: no-repeat;
+    background-position: 15% 27%, 9% 40%;
+}
+
+.promotion__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #F4F4F4;;
-    padding: 70px 12% 80px;
-    background-image: url(/content/decoration.svg), url(/content/promotion__decoration.svg);
-    background-repeat: no-repeat;
-    background-position: 15% 27%, 9% 40%;
 }
 
 .promotion h2{
@@ -294,9 +300,12 @@ h2{
 }
 
 .typesOfStairs{
+    padding-bottom: 120px;
+}
+
+.typesOfStairs__container{
     display: flex;
     flex-direction: column;
-    padding: 110px 12% 120px;
 }
 
 .typesOfStairs__header{
@@ -421,12 +430,15 @@ h2{
 }
 
 .laborAct{
+    padding: 110px 0 130px;
+    background-image: linear-gradient(to right, #F4F4F4 63%, #F9BB88 63%);
+    position: relative;
+}
+
+.laborAct__container{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 110px 12% 130px;
-    background-image: linear-gradient(to right, #F4F4F4 63%, #F9BB88 63%);
-    position: relative;
 }
 
 .laborAct::before{
@@ -495,15 +507,23 @@ h2{
 }
 
 .feedback{
-    display: flex;
-    gap: 135px;
-    padding: 110px 12% 110px 7%;
+    padding: 110px 0 110px;
+    position: relative;
 }
 
-.feedback__map{
-    width: 52%;
+.feedback__container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 135px;
+}
+
+.feedback__image{
+    width: 46%;
     height: 560px;
-    border: 8px solid #FDE4CF;
+    position: absolute;
+    top: 12%;
+    left: 7%;
+    background-size: contain;
 }
 
 .feedback__content{
