@@ -28,7 +28,11 @@ export const checkOrderForm = () => {
         const InputWidth = document.getElementById('width');
         const RegExrWidth = /[1-3]{1}[0-9]{2}|400/;
         
-        if (RegExrHeight.test(height) == false) {
+        // if (RegExrHeight.test(height) == false) {
+        //     InputHeigh.classList.add("error");
+        //     InputHeigh.focus();
+        //     return;  
+        if (parseInt(height) < 200 || parseInt(height) > 400) {
             InputHeigh.classList.add("error");
             InputHeigh.focus();
             return;
@@ -52,12 +56,8 @@ export const checkOrderForm = () => {
                 width : width,
                 length : length,
             };
+            
         };
-
-        InputHeigh.value = "";
-        InputLenth.value = "";
-        InputWidth.value = "";
-
     });
         
     //step3
@@ -125,6 +125,9 @@ export const checkOrderForm = () => {
         }
         
         order.customer = customer;
+        
+        const closesizeOfStairs = document.getElementById("finish");
+        closesizeOfStairs.classList.remove("active");
    
        window.setTimeout(() => console.log('Заказ сформирован и отправлен: ', order), 1000);
     });

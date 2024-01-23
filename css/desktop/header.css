@@ -104,17 +104,49 @@ header{
     color: white;
 }
 
-.burgerMenu{
+.burgerIcon{
     display: none;
     background-image: url(/content/burgerMenu.svg);
+    background-size: cover;
     width: 25px;
     height: 20px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.burgerMenuRotate{
+.menuIconRotate {
     transform: rotate(90deg);
+}
+
+.burgerMenu{
+    display: none; 
+}
+
+.burgerMenuActive{
+    display: flex;
+    position: fixed;
+    top: 124px;
+    right: 0;
+    z-index: 1;
+    background-color: #F9BB88;
+    width: 100%;
+    justify-content: flex-end;
+    margin:0 15px;
+}
+
+.header__menu--active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header__item--active{
+    text-align: right;
+}
+
+.header__item--active a:hover{
+    color: #FF9646;
+    transition: 0.2s;
 }
 
 .navigation{
@@ -135,4 +167,8 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.burgerMenu--active{
+    display: none;
 }
