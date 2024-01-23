@@ -26,7 +26,7 @@ export const checkOrderForm = () => {
     const checkCondition = (id) => {
         const { start, end, regExr } = CONDITIONS[id];
         const value = start ? Number(getValue(id)) : getValue(id);
-
+        
         const setError = (id) =>
             document.getElementById(id).classList.add("error");
         const deleteError = (id) =>
@@ -102,7 +102,7 @@ export const checkOrderForm = () => {
     document.getElementById("getAQuote").addEventListener("click", () => {
         const name = getValue("customerName");
         const InputName = document.getElementById("customerName");
-        const RegExrName = /^[А-Я][а-яё]*$/;
+        const RegExrName = /[A-Za-zА-Яа-я]/;
 
         const phone = getValue("customerPhone");
         const InputPhone = document.getElementById("customerPhone");

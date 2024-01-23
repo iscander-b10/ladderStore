@@ -10,21 +10,21 @@ import {openBurgerMenu} from "../js/burgerMenu.js";
 import {toggleModal} from "../js/toggleModal.js";
 
 function onload() {
-    const findModalWindow = function(idButton, idModalWindow){
+    const findModalWindow = function(idButton, openModalId, closeModalId){
         const button = document.getElementById(idButton);
-        button.addEventListener("click", () => toggleModal(idModalWindow));
+        button.addEventListener("click", () => toggleModal(openModalId));
+
+        if (closeModalId) {
+            document.getElementById(closeModalId).classList.remove("active");
+        }
     };
     
     if (location.pathname.includes("mainPage")) {
         toggleModalMainPage();
 
         findModalWindow("calculateTheCost", "choiceOfStairs__container");
-        
-        const nextOne = document.getElementById("nextOne");
-        nextOne.addEventListener("click", () => {
-            document.getElementById("choiceOfStairs__container").classList.remove("active");
-            document.getElementById("sizeOfStairs").classList.add("active");
-        });
+
+        findModalWindow("nextOne", "sizeOfStairs", "choiceOfStairs__container");
 
         findModalWindow("closeStepTwo", "sizeOfStairs");
 
