@@ -1,102 +1,117 @@
 export const checkOrderForm = () => {
     const order = {};
+    const CONDITIONS = {
+        height: {
+            start: 200,
+            end: 400,
+        },
+        length: {
+            start: 100,
+            end: 700,
+        },
+        width: {
+            start: 100,
+            end: 400,
+        },
+        customerName: {
+            regExr: /^[А-Я][а-яё]*$/,
+        },
+        customerMail: {
+            regExr: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        }
+    };
+
+    const getValue = (id) => document.getElementById(id).value;
+
+    const checkCondition = (id) => {
+        const { start, end, regExr } = CONDITIONS[id];
+        const value = start ? Number(getValue(id)) : getValue(id);
+
+        const setError = (id) =>
+            document.getElementById(id).classList.add("error");
+        const deleteError = (id) =>
+            document.getElementById(id).classList.remove("error");
+        const createCondition = (value) =>
+            regExr ? regExr.test(value) : value >= start && value <= end;
+
+        if (createCondition(value)) {
+            deleteError(id);
+            return false;
+        } else {
+            setError(id);
+            return true;
+        }
+    };
 
     //step1
-    document.getElementById('nextOne').addEventListener('click', () => {
-        const typeStairsSelected = document.querySelector("input[name='typesOfStairs']:checked")
+    document.getElementById("nextOne").addEventListener("click", () => {
+        const typeStairsSelected = document.querySelector(
+            "input[name='typesOfStairs']:checked"
+        );
         order.typeStairs = typeStairsSelected.value;
     });
-    
+
     //step2
-    document.getElementById('nextTwo').addEventListener('click', () => {
-        const typeViewSelected = document.querySelector("input[name='viewStairs']:checked")
-        order.stairsView = typeViewSelected.value;
-        
-        // const creatingVariablesForInput = function(){
+    const arrId = ['height', 'length', 'width'];
+    arrId.map((id) =>
+        document
+            .getElementById(id)
+            .addEventListener("change", () => checkCondition(id))
+    );
+    document.getElementById("nextTwo").addEventListener("click", () => {
+        const typeViewSelected = document.querySelector(
+            "input[name='viewStairs']:checked"
+            ).value;
+        const checkInputs = arrId.filter((id) => checkCondition(id)).length;
 
-        // };
-        
-        const height = document.getElementById('height').value;
-        const InputHeigh = document.getElementById('height');
-        const RegExrHeight = /[2-3]{1}[0-9]{2}|400/;
-        
-        const length = document.getElementById('length').value;
-        const InputLenth = document.getElementById('length');
-        const RegExrLength = /[1-6]{1}[0-9]{2}|700/;
-
-        const width = document.getElementById('width').value;
-        const InputWidth = document.getElementById('width');
-        const RegExrWidth = /[1-3]{1}[0-9]{2}|400/;
-        
-        // if (RegExrHeight.test(height) == false) {
-        //     InputHeigh.classList.add("error");
-        //     InputHeigh.focus();
-        //     return;  
-        if (parseInt(height) < 200 || parseInt(height) > 400) {
-            InputHeigh.classList.add("error");
-            InputHeigh.focus();
-            return;
-        }   else if (RegExrLength.test(length) == false) {
-            InputLenth.classList.add("error");
-            InputHeigh.classList.remove("error");
-            InputLenth.focus();
-            return;
-        }   else if (RegExrWidth.test(width) == false) {
-            InputWidth.classList.add("error");
-            InputWidth.focus();
-            InputLenth.classList.remove("error");
-            InputHeigh.classList.remove("error");
-            return;
-        }   else {
+        if (!checkInputs) {
+            document.getElementById("facing").classList.add("active");
             document.getElementById("sizeOfStairs").classList.remove("active");
-            document.getElementById("facing").classList.add("active"); 
-            InputWidth.classList.remove("error");
             order.stairParams = {
-                height : height,
-                width : width,
-                length : length,
+                height: getValue("height"),
+                width: getValue("width"),
+                length: getValue("length"),
             };
-            
-        };
+            order.stairsView = typeViewSelected;
+        }
     });
-        
+
     //step3
-    document.getElementById('calculate').addEventListener('click', () => {
-        const typeFacingSelected = document.querySelector("input[name='facing']:checked")
+    document.getElementById("calculate").addEventListener("click", () => {
+        const typeFacingSelected = document.querySelector(
+            "input[name='facing']:checked"
+        );
         order.finishesView = typeFacingSelected.value;
-        
-        const valueType = document.getElementById('valueType');
+
+        const valueType = document.getElementById("valueType");
         valueType.textContent = order.typeStairs;
-        const valueView = document.getElementById('valueView');
+        const valueView = document.getElementById("valueView");
         valueView.textContent = order.stairsView;
-        const valueFacing = document.getElementById('valueFinish');
+        const valueFacing = document.getElementById("valueFinish");
         valueFacing.textContent = order.finishesView;
 
-        const valueLength = document.getElementById('valueLength');
-        valueLength.textContent = order.stairParams.length + ' ' + 'см';
-        const valueWidth = document.getElementById('valueWidth');
-        valueWidth.textContent = order.stairParams.width + ' ' + 'см';
-        const valueHeight = document.getElementById('valueHeight');
-        valueHeight.textContent = order.stairParams.height + ' ' + 'см';
-
-        
+        const valueLength = document.getElementById("valueLength");
+        valueLength.textContent = order.stairParams.length + " " + "см";
+        const valueWidth = document.getElementById("valueWidth");
+        valueWidth.textContent = order.stairParams.width + " " + "см";
+        const valueHeight = document.getElementById("valueHeight");
+        valueHeight.textContent = order.stairParams.height + " " + "см";
     });
-    
+
     //step4
-    document.getElementById('getAQuote').addEventListener('click', () => {
-        
-        const name = document.getElementById('customerName').value;
-        const InputName = document.getElementById('customerName');
+    document.getElementById("getAQuote").addEventListener("click", () => {
+        const name = getValue("customerName");
+        const InputName = document.getElementById("customerName");
         const RegExrName = /^[А-Я][а-яё]*$/;
 
-        const phone = document.getElementById('customerPhone').value;
-        const InputPhone = document.getElementById('customerPhone');
-        const RegExrPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+        const phone = getValue("customerPhone");
+        const InputPhone = document.getElementById("customerPhone");
+        const RegExrPhone =
+            /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
 
-        const mail = document.getElementById('customerMail').value;
-        const InputMail = document.getElementById('customerMail');
-        const RegExrMail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-        
+        const mail = getValue("customerMail");
+        const InputMail = document.getElementById("customerMail");
+
         if (RegExrName.test(name) == false) {
             InputName.classList.add("error");
             InputName.focus();
@@ -106,7 +121,7 @@ export const checkOrderForm = () => {
             InputPhone.classList.add("error");
             InputPhone.focus();
             return;
-        } else if(RegExrMail.test(mail) == false) {
+        } else if (checkCondition('customerMail')) {
             InputMail.classList.add("error");
             InputName.classList.remove("error");
             InputPhone.classList.remove("error");
@@ -118,18 +133,16 @@ export const checkOrderForm = () => {
             InputMail.classList.remove("error");
         }
 
-        const customer = {
-            name: document.getElementById('customerName').value,
-            phone: document.getElementById('customerPhone').value,
-            email: document.getElementById('customerMail').value,
-        }
-        
+        const customer = { name, phone, email: mail };
+
         order.customer = customer;
-        
+
         const closesizeOfStairs = document.getElementById("finish");
         closesizeOfStairs.classList.remove("active");
-   
-       window.setTimeout(() => console.log('Заказ сформирован и отправлен: ', order), 1000);
-    });
 
+        window.setTimeout(
+            () => console.log("Заказ сформирован и отправлен: ", order),
+            1000
+        );
+    });
 };
