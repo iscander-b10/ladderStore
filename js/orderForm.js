@@ -20,6 +20,7 @@ export const checkOrderForm = (step) => {
             regExr: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         },
     };
+
     const IDS = {
         inputs: {
             stepOne: [],
@@ -32,6 +33,26 @@ export const checkOrderForm = (step) => {
 
     const getValues = (ids) => {
         return ids.map((id) => document.getElementById(id).value);
+
+        // ["height", "length", "width"]
+        // [value1, value2, value3]
+
+        //step1: 
+        // "height"
+        // (id) => document.getElementById(id).value
+        // ("height") => document.getElementById("height").value
+
+        //step2: 
+        // "length"
+        // (id) => document.getElementById(id).value
+        // ("length") => document.getElementById("length").value
+
+        //step3: 
+        // "width"
+        // (id) => document.getElementById(id).value
+        // ("width") => document.getElementById("width").value
+
+
     }
 
     const checkInputs = (step) => {
@@ -62,7 +83,6 @@ export const checkOrderForm = (step) => {
 
     const handleClick = (e) => {
         const { id } = e.target;
-        console.log('id', id);
 
         switch (id) {
             case "nextOne": {
@@ -87,8 +107,9 @@ export const checkOrderForm = (step) => {
                         .getElementById("sizeOfStairs")
                         .classList.remove("active");
                     //saveData
-                    const [height, length, width] = getValues(arrIds);
-                    order.stairParams = { height, width, length };
+                    const [height, length, width] = getValues(arrIds); // [200,200,200];
+                    
+                    order.stairParams = { height, width, length};
                     order.stairsView = typeViewSelected;
                 }
             }
@@ -159,14 +180,14 @@ export const checkOrderForm = (step) => {
     };
 
     const createClickListeners = () => {
-        IDS.buttons.map((id) =>
-            document.getElementById(id).addEventListener("click", handleClick)
+        IDS.buttons.map((idButton) =>
+            document.getElementById(idButton).addEventListener("click", handleClick)
         );
 
-        IDS.inputs.stepTwo.map((id) =>
+        IDS.inputs.stepTwo.map((idInput) =>
             document
-                .getElementById(id)
-                .addEventListener("change", () => checkCondition(id))
+                .getElementById(idInput)
+                .addEventListener("change", () => checkCondition(idInput))
         );
     };
 
