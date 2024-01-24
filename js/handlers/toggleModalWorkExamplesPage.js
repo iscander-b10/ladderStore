@@ -1,9 +1,9 @@
-import {pasteContent} from './pasteContentInBlock.js';
-import {contractOfferContent} from '../data/contractOfferContent.js';
-import {privacyPolicyContent} from '../data/privacyPolicyContent.js';
-import {toggleModal} from '../js/toggleModal.js';
+import {pasteContent} from '../utils/pasteContentInBlock.js';
+import {contractOfferContent} from '../../data/contractOfferContent.js';
+import {privacyPolicyContent} from '../../data/privacyPolicyContent.js';
+import {toggleModal} from './handlers/modalHandler.js';
 
-export function toggleModalMainPage(){
+export function toggleModalWorkExamplesPage(){
     pasteContent('contractOffer__content', contractOfferContent);
     pasteContent('privacyPolicy__content', privacyPolicyContent);
 
@@ -14,7 +14,7 @@ export function toggleModalMainPage(){
 
     findModalWindow("callMeBack", "application");
     findModalWindow("closeApplication", "application");
-    
+
     const applicationSentSuccessfully = document.getElementById("application__btn");
     applicationSentSuccessfully.addEventListener("click", () => {
         toggleModal("application");
@@ -30,8 +30,6 @@ export function toggleModalMainPage(){
     });
 
     findModalWindow("closePrivacyPolicy", "privacyPolicy__wrapper");
-
-    findModalWindow("promotionPrivacyPolicy", "privacyPolicy__wrapper");
 
     findModalWindow("feedbackPrivacyPolicy", "privacyPolicy__wrapper");
 

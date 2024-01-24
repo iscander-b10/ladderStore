@@ -13,16 +13,24 @@
     <link rel="stylesheet" href="/css/mobile/headerMobile.css">
     <link rel="stylesheet" href="/css/mobile/mainPageMobile.css">
     <link rel="stylesheet" href="/css/mobile/footerMobile.css">
-    <script src="/js/formVerification.js" type="module"></script>
     <script src="/js/onloadScript.js" type="module"></script>
-    <script src="/js/toggleModalMainPage.js" type="module"></script>
+    <script src="/js/utils/createHandlers.js" type="module"></script>
+    <script src="/js/handlers/createMainPageHandlers.js" type="module"></script> 
+    <script src="/js/handlers/createAboutCompanyPageHandlers.js" type="module"></script> 
+    <script src="/js/utils/createBurgerHandler.js" type="module"></script> 
+    <script src="/js/utils/pasteContentInBlock.js" type="module"></script>
+    <script src="/js/utils/createModalHandler.js" type="module"></script>
+    <script src="/js/utils/scrollOfStairs.js" type="module"></script>
+    <script src="/js/orderForm.js" type="module"></script>
+    <script src="/data/contractOfferContent.js" type="module"></script>
+    <script src="/data/privacyPolicyContent.js" type="module"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="header__nav">
                 <div class="header__logo">
-                    <a href="/html/mainPage.html">
+                    <a href="/pages/mainPage.html">
                         <img src="/content/header__logo.svg" alt="">
                     </a>
                     <ul class="header__title">
@@ -33,19 +41,19 @@
                 </div>
                 <ul class="header__menu">
                     <li class="header__item">
-                        <a href="/html/aboutCompanyPage.html">О компании</a>
+                        <a href="/pages/aboutCompanyPage.html">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/catalogPage.html">Каталог</a>
+                        <a href="/pages/catalogPage.html">Каталог</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/workExamplesPage.html">Примеры работ</a>
+                        <a href="/pages/workExamplesPage.html">Примеры работ</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/blogPage.html">Блог</a>
+                        <a href="/pages/blogPage.html">Блог</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/contactsPage.html">Контакты</a>
+                        <a href="/pages/contactsPage.html">Контакты</a>
                     </li>
                 </ul>
                 <div class="header__contacts">
@@ -58,19 +66,19 @@
                 <div class="burgerMenu">
                     <ul class="header__menu--active">
                         <li class="header__item--active">
-                            <a href="/html/aboutCompanyPage.html">О компании</a>
+                            <a href="/pages/aboutCompanyPage.html">О компании</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/catalogPage.html">Каталог</a>
+                            <a href="/pages/catalogPage.html">Каталог</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/workExamplesPage.html">Примеры работ</a>
+                            <a href="/pages/workExamplesPage.html">Примеры работ</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/blogPage.html">Блог</a>
+                            <a href="/pages/blogPage.html">Блог</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/contactsPage.html">Контакты</a>
+                            <a href="/pages/contactsPage.html">Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -716,7 +724,7 @@
             <nav class="footer__nav">
                 <div class="footer__logo">
                     <div class="footer__logoTop">
-                        <a href="/html/mainPage.html">
+                        <a href="/pages/mainPage.html">
                             <img src="/content/footer__logo.svg" alt="">
                         </a>
                         <ul class="footer__title">
@@ -730,21 +738,21 @@
                 <div class="footer__columns">
                     <ul class="footer__menu">
                         <li class="footer__item">
-                            <a href="/html/aboutCompanyPage.html">О компании</a>
+                            <a href="/pages/aboutCompanyPage.html">О компании</a>
                         </li>
                         <li class="footer__item">
-                            <a href="/html/catalogPage.html">Каталог</a>
+                            <a href="/pages/catalogPage.html">Каталог</a>
                         </li>
                         <li class="footer__item">
-                            <a href="/html/blogPage.html">Блог</a>
+                            <a href="/pages/blogPage.html">Блог</a>
                         </li>
                     </ul>
                     <ul class="footer__menu">
                         <li class="footer__item">
-                            <a href="/html/workExamplesPage.html">Примеры работ</a>
+                            <a href="/pages/workExamplesPage.html">Примеры работ</a>
                         </li>
                         <li class="footer__item">
-                            <a href="/html/contactsPage.html">Контакты</a>
+                            <a href="/pages/contactsPage.html">Контакты</a>
                         </li>
                     </ul>
                 </div>

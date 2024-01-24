@@ -1,4 +1,4 @@
-export function scrollOfStairs(){
+export const scrollOfStairs = () => {
     document.getElementsByClassName("leftArrow")[0].addEventListener('click', () => scroll());
     document.getElementsByClassName("rightArrow")[0].addEventListener('click', () => scroll(true));
 

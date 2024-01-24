@@ -1,9 +1,9 @@
-import {pasteContent} from './pasteContentInBlock.js';
-import {contractOfferContent} from '../data/contractOfferContent.js';
-import {privacyPolicyContent} from '../data/privacyPolicyContent.js';
-import {toggleModal} from '../js/toggleModal.js';
+import {pasteContent} from '../utils/pasteContentInBlock.js';
+import {contractOfferContent} from '../../data/contractOfferContent.js';
+import {privacyPolicyContent} from '../../data/privacyPolicyContent.js';
+import {toggleModal} from './handlers/modalHandler.js';
 
-export function toggleModalBlogPage(){
+export function toggleModalCatalogPage(){
     pasteContent('contractOffer__content', contractOfferContent);
     pasteContent('privacyPolicy__content', privacyPolicyContent);
 

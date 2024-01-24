@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Примеры работ</title>
+    <title>Блог</title>
     <link rel="stylesheet" href="/css/desktop/header.css">
-    <link rel="stylesheet" href="/css/desktop/workExamplesPage.css">
+    <link rel="stylesheet" href="/css/desktop/blogPage.css">
     <link rel="stylesheet" href="/css/desktop/footer.css">
     <link rel="stylesheet" href="/css/desktop/app/application.css">
     <link rel="stylesheet" href="/css/desktop/app/privacyPolicy&&ContractOffer.css">
     <link rel="stylesheet" href="/css/mobile/headerMobile.css">
-    <link rel="stylesheet" href="/css/mobile/workExamplesPageMobile.css">
+    <link rel="stylesheet" href="/css/mobile/blogPageMobile.css">
     <link rel="stylesheet" href="/css/mobile/footerMobile.css">
     <script src="/js/onloadScript.js" type="module"></script>
-    <script src="/js/toggleModalWorkExamplesPage.js" type="module"></script>
+    <script src="/js/toggleModalBlogPage.js" type="module"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="header__nav">
                 <div class="header__logo">
-                    <a href="/html/mainPage.html">
+                    <a href="/pages/mainPage.html">
                         <img src="/content/header__logo.svg" alt="">
                     </a>
                     <ul class="header__title">
@@ -31,19 +31,19 @@
                 </div>
                 <ul class="header__menu">
                     <li class="header__item">
-                        <a href="/html/aboutCompanyPage.html">О компании</a>
+                        <a href="/pages/aboutCompanyPage.html">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/catalogPage.html">Каталог</a>
+                        <a href="/pages/catalogPage.html">Каталог</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/workExamplesPage.html">Примеры работ</a>
+                        <a href="/pages/workExamplesPage.html">Примеры работ</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/blogPage.html">Блог</a>
+                        <a href="/pages/blogPage.html">Блог</a>
                     </li>
                     <li class="header__item">
-                        <a href="/html/contactsPage.html">Контакты</a>
+                        <a href="/pages/contactsPage.html">Контакты</a>
                     </li>
                 </ul>
                 <div class="header__contacts">
@@ -56,30 +56,30 @@
                 <div class="burgerMenu">
                     <ul class="header__menu--active">
                         <li class="header__item--active">
-                            <a href="/html/aboutCompanyPage.html">О компании</a>
+                            <a href="/pages/aboutCompanyPage.html">О компании</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/catalogPage.html">Каталог</a>
+                            <a href="/pages/catalogPage.html">Каталог</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/workExamplesPage.html">Примеры работ</a>
+                            <a href="/pages/workExamplesPage.html">Примеры работ</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/blogPage.html">Блог</a>
+                            <a href="/pages/blogPage.html">Блог</a>
                         </li>
                         <li class="header__item--active">
-                            <a href="/html/contactsPage.html">Контакты</a>
+                            <a href="/pages/contactsPage.html">Контакты</a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div class="navigation">
                 <div class="navigation__selected">
-                    <a href="/html/mainPage.html" class="navigation__links">Главная</a>
+                    <a href="/pages/mainPage.html" class="navigation__links">Главная</a>
                     <img src="/content/arrowRight.svg" alt="">
-                    <a href="/html/workExamplesPage.html" class="navigation__links">Примеры работ</a>
+                    <a href="/pages/blogPage.html" class="navigation__links">Блог</a>
                 </div>
-                <a href="/html/mainPage.html" class="navigation__links">Вернуться на главную</a>
+                <a href="/pages/mainPage.html" class="navigation__links">Вернуться на главную</a>
             </div>
             <div class="application__wrapper" id="application">
                 <div class="application">
@@ -134,49 +134,88 @@
         </div>
     </header>
     <main>
-        <section class="workExamples">
-            <div class="container workExamples__container">
-                <div class="workExamples__title">
-                    <h2 class="h2">Типы лестниц</h2>
+        <section class="card">
+            <div class="container card__container">
+                <div class="card__title">
+                    <h2 class="h2">Забежная лестница</h2>
                 </div>
-                <ul class="workExamples__list">
-                    <li>
-                        <img src="/content/workExamples1.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples2.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples3.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples4.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples5.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples6.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples7.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples8.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples9.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples10.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples11.png" alt="" class="workExamples__img">
-                    </li>
-                    <li>
-                        <img src="/content/workExamples12.png" alt="" class="workExamples__img">
+                <div class="card__info">
+                    <div class="card__left-handSide">
+                        <img src="/content/card__main.png" alt="">
+                        <div class="delimiter"></div>
+                        <div class="selectionOfStairs">
+                            <p>Рассчитайте стоимость <br> вашей лестницы <span>в 3 шага</span></p>
+                            <button class="moreDetails">Подробнее</button>
+                        </div>
+                    </div>
+                    <div class="card__right-handSide">
+                        <p class="name">Забежная лестница</p>
+                        <div class="decorative"></div>
+                        <p>от <span class="price">27 000</span>₽ за м. п.</p>
+                        <p class="text">Cтоимость указана за метр подъема, исходя из средней статистической цены наших клиентов и может меняться в зависимости от ваших размеров! Для уточнения цены лестницы — сделайте заказ или оставьте заявку на рассчет стоимости.</p>
+                        <p>Срок изготовления: <span class="term">от 5-ти дней</span></p>
+                        <button class="submitApplication">Оставить заявку</button>
+                        <ul class="card__listText">Основных причин, почему забежная лестница с поворотом пользуется популярностью, несколько: <br><br>
+                            <li>повышенная прочность, особенно если изготавливать по проверенной технологии из качественных материалов;</li>
+                            <li>практичность — служит долго, не нуждается в дополнительных вложениях денег;</li>
+                            <li>изящность, несмотря на монолитность;</li>
+                            <li>эффективность в условиях ограниченности пространства.</li>
+                        </ul>
+                        <p> Компания «Лесенка-52» выполняет проектирование конструкций при помощи специального програмного обеспечения, позволяющего продумать все нюансы.</p>
+                        <p> В подарок еще до начала работ вы получаете визуализацию будущей конструкции (чтобы после была возможность сравнить).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="aboutUs">
+            <div class="container">
+                <ul class="aboutUs__menu">
+                    <li class="aboutUs__item">
+                        <img src="/content/worker.svg" class="opa" alt="">
+                        <div class="aboutUs__text">
+                            <h3 class="aboutUs__title">Работаем <br> без посредников</h3>
+                            <p class="aboutUs__subtitle">Изготовление и монтаж осуществляют только наши мастера с опытом работы более Х-ти лет.</p>
+                        </div>
+                    <li class="aboutUs__item">
+                        <img src="/content/money.svg" alt="">
+                        <div class="aboutUs__text">
+                            <h3 class="aboutUs__title">Фиксированные <br> цены</h3>
+                            <p class="aboutUs__subtitle">После согласования сметы все цены фиксируются в договоре и не изменяются в процессе.</p>
+                        </div>
+                    <li class="aboutUs__item">
+                        <img src="/content/stair.svg" alt="">
+                        <div class="aboutUs__text">
+                            <h3 class="aboutUs__title">Любые варианты <br> отделки</h3>
+                            <p class="aboutUs__subtitle">Любые материалы отделки готовых лестниц — от дерева и камня до кованых элементов и стекла.</p>
+                        </div>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="promotion">
+            <div class="container promotion__container">
+                <h2>Получите 3d-визуализацию <br> вашей будущей лестницы бесплатно!</h2>
+                <p class="promotion__subtitle">Оставьте свои контактные данные и наш специалист <br> свяжется свами в течении 15 минут!</p>
+                <form action="#" method="post">
+                    <ul class="promotion__form">
+                        <li class="promotion__formItem">
+                            <p class="promotion__formName">Ваше  имя...</p>
+                            <input type="text" name="username" class="promotion__input">
+                        </li>
+                        <li class="promotion__formItem">
+                            <p class="promotion__formName">Ваш телефон...</p>
+                            <input type="tel" name="userphone" class="promotion__input">
+                        </li>
+                        <li class="promotion__formItem">
+                            <p class="promotion__formName">Ваш e-mail...</p>
+                            <input type="text" name="usermail" class="promotion__input">
+                        </li>
+                    </ul>
+                </form>
+                <div class="promotion__sendAnApplication">
+                    <input type="submit" value="Отправить заявку" class="sendAnApplication"/>
+                    <p class="privacyPolicyText">Нажимая на кнопку <br> вы соглашаетесь  с <span id="promotionPrivacyPolicy">политикой <br> конфиденциальности</span></p>
+                </div>
             </div>
         </section>
         <section class="typesOfStairs">
@@ -283,6 +322,43 @@
                 </ul>
             </div>
         </section>
+        <section class="laborAct">
+            <div class="container laborAct__container">
+                <div class="laborAct__header">
+                    <h2>Как мы <br> работаем?</h2>
+                </div>
+                <ul class="laborAct__list">
+                    <li class="laborAct__item">
+                        <div class="laborAct__paragraph">01</div>
+                        <div class="laborAct__text">
+                            <h3 class="laborAct__title">Ваша заявка <br> на замер</h3>
+                            <p>Позвоните нам или заполните форму обратной связи заказа на сайте.</p>
+                        </div>
+                    </li>
+                    <li class="laborAct__item">
+                        <div class="laborAct__paragraph">02</div>
+                        <div class="laborAct__text">
+                            <h3 class="laborAct__title">Замер и <br> проектирование</h3>
+                            <p>В удобное вам время проводим замеры. Проектируем удобную конструкцию.</p>
+                        </div>
+                    </li>
+                    <li class="laborAct__item">
+                        <div class="laborAct__paragraph">03</div>
+                        <div class="laborAct__text">
+                            <h3 class="laborAct__title">Оформление <br> договора</h3>
+                            <p>Просчитываем смету, готовим договор. После согласования подписываем договор.</p>
+                        </div>
+                    </li>
+                    <li class="laborAct__item">
+                        <div class="laborAct__paragraph">04</div>
+                        <div class="laborAct__text">
+                            <h3 class="laborAct__title">Выполнение <br> работ</h3>
+                            <p>Выполняем комплекс работ, качественно и в установленные договором сроки.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
         <section class="feedback">
             <div class="container feedback__container">
                 <div>
@@ -333,7 +409,7 @@
             <nav class="footer__nav">
                 <div class="footer__logo">
                     <div class="footer__logoTop">
-                        <a href="/html/mainPage.html">
+                        <a href="/pages/mainPage.html">
                             <img src="/content/footer__logo.svg" alt="">
                         </a>
                         <ul class="footer__title">
@@ -347,21 +423,21 @@
                 <div class="footer__columns">
                     <ul class="footer__menu">
                         <li class="footer__item">
-                            <a href="/html/aboutCompanyPage.html">О компании</a>
+                            <a href="/pages/aboutCompanyPage.html">О компании</a>
                         </li>
                         <li class="footer__item">
-                            <a href="/html/catalogPage.html">Каталог</a>
+                            <a href="/pages/catalogPage.html">Каталог</a>
                         </li>
                         <li class="footer__item">
-                            <a href="/html/blogPage.html">Блог</a>
+                            <a href="/pages/blogPage.html">Блог</a>
                         </li>
                     </ul>
                     <ul class="footer__menu">
                         <li class="footer__item">
-                            <a href="/html/workExamplesPage.html">Примеры работ</a>
+                            <a href="/pages/workExamplesPage.html">Примеры работ</a>
                         </li>
                         <li class="footer__item">
-                            <a href="/html/contactsPage.html">Контакты</a>
+                            <a href="/pages/contactsPage.html">Контакты</a>
                         </li>
                     </ul>
                 </div>
