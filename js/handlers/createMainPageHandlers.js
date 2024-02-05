@@ -1,29 +1,39 @@
 import { scrollOfStairs } from "../scrollOfStairs.js";
 import { checkOrderForm } from "../orderForm.js";
-import { toggleModalMainPage } from "../toggleModalMainPage.js";
 import {openBurgerMenu} from "../burgerMenu.js";
-import {modalHandler} from "../utils/modalHandler.js";
+import {createModalHandler} from "../utils/createModalHandler.js";
+import {pasteContent} from "../pasteContentInBlock.js";
+import {contractOfferContent} from "../../data/contractOfferContent.js";
+import {privacyPolicyContent} from "../../data/privacyPolicyContent.js";
+
+const MODAL_IDS = [
+    ["calculateTheCost", "choiceOfStairs__container"],
+    ["nextOne", "sizeOfStairs", "choiceOfStairs__container"],
+    ["closeStepTwo", "sizeOfStairs"],
+    ["closeFacing", "facing"],
+    ["callMeBack", "application"],
+    ["closeApplication", "application"],
+    ["application__btn", "application", "applicationSuccessfully"],
+    ["closeApplicationSuccessfully", "applicationSuccessfully"],
+    ["applicationPrivacyPolicy", "privacyPolicy__wrapper", "application"],
+    ["closePrivacyPolicy", "privacyPolicy__wrapper"],
+    ["promotionPrivacyPolicy", "privacyPolicy__wrapper"],
+    ["feedbackPrivacyPolicy", "privacyPolicy__wrapper"],
+    ["conractOffer", "contractOffer__wrapper"],
+    ["closeContractOffer", "contractOffer__wrapper"],
+    ["privacyPolicyFooter", "privacyPolicy__wrapper"],
+    ["footerCallMeBack", "application"],
+    ["closeFinish", "finish"],
+    ["calculate", "finish", "facing"],
+];
 
 export const createMainPageHandlers = () => {
-    toggleModalMainPage();
+    pasteContent('contractOffer__content', contractOfferContent);
+    pasteContent('privacyPolicy__content', privacyPolicyContent);
 
-            modalHandler("calculateTheCost", "choiceOfStairs__container");
-
-            modalHandler("nextOne", "sizeOfStairs", "choiceOfStairs__container");
-
-            modalHandler("closeStepTwo", "sizeOfStairs");
-
-            modalHandler("closeFacing", "facing");
-
-            const nextThree = document.getElementById("calculate");
-            nextThree.addEventListener("click", () => {
-                document.getElementById("facing").classList.remove("active");
-                document.getElementById("finish").classList.add("active");
-            });
-
-            modalHandler("closeFinish", "finish");
-            
-            scrollOfStairs();
-            checkOrderForm();
-            openBurgerMenu();
+    MODAL_IDS.map((elem) => createModalHandler(...elem));
+    
+    scrollOfStairs();
+    checkOrderForm();
+    openBurgerMenu();
 }

@@ -1,7 +1,7 @@
 import {pasteContent} from './pasteContentInBlock.js';
 import {contractOfferContent} from '../data/contractOfferContent.js';
 import {privacyPolicyContent} from '../data/privacyPolicyContent.js';
-import {toggleModal} from './utils/toggleModal.js';
+import {toggleModal} from './utils/createModalHandler.js';
 
 export function toggleModalContactsPage(){
     pasteContent('contractOffer__content', contractOfferContent);
