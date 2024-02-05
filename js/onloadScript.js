@@ -7,28 +7,42 @@ import {toggleModalWorkExamplesPage} from "../js/toggleModalWorkExamplesPage.js"
 import {toggleModalBlogPage} from "../js/toggleModalBlogPage.js";
 import {toggleModalContactsPage} from "../js/toggleModalContactsPage.js";
 import {openBurgerMenu} from "../js/burgerMenu.js";
-import {toggleModal} from "../js/toggleModal.js";
+import {modalHandler} from "../js/utils/modalHandler.js";
 
 function onload() {
-    const findModalWindow = function(idButton, openModalId, closeModalId){
-        const button = document.getElementById(idButton);
-        button.addEventListener("click", () => toggleModal(openModalId));
-
-        if (closeModalId) {
-            document.getElementById(closeModalId).classList.remove("active");
+    const page = location.pathname.slice(6, -5);
+    console.log(page);
+    switch (page) {
+        case "mainPage": {
+            console.log(page);
         }
-    };
+        case "aboutCompanyPage": {
+
+        }
+        case "catalogPage": {
+
+        }
+        case "workExamplesPage": {
+
+        }
+        case "blogPage": {
+
+        }
+        case "contactsPage": {
+
+        }
+    }
     
     if (location.pathname.includes("mainPage")) {
         toggleModalMainPage();
 
-        findModalWindow("calculateTheCost", "choiceOfStairs__container");
+        modalHandler("calculateTheCost", "choiceOfStairs__container");
 
-        findModalWindow("nextOne", "sizeOfStairs", "choiceOfStairs__container");
+        modalHandler("nextOne", "sizeOfStairs", "choiceOfStairs__container");
 
-        findModalWindow("closeStepTwo", "sizeOfStairs");
+        modalHandler("closeStepTwo", "sizeOfStairs");
 
-        findModalWindow("closeFacing", "facing");
+        modalHandler("closeFacing", "facing");
 
         const nextThree = document.getElementById("calculate");
         nextThree.addEventListener("click", () => {
@@ -36,7 +50,7 @@ function onload() {
             document.getElementById("finish").classList.add("active");
         });
 
-        findModalWindow("closeFinish", "finish");
+        modalHandler("closeFinish", "finish");
         
         scrollOfStairs();
         checkOrderForm();
