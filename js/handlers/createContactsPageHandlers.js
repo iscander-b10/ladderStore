@@ -1,7 +1,7 @@
-import { toggleModalAboutCompanyPage } from "../toggleModalAboutCompanyPage.js";
+import {toggleModalContactsPage} from "../toggleModalContactsPage.js";
 import {openBurgerMenu} from "../burgerMenu.js";
 
 export const createContactsPageHandlers = () => {
-        toggleModalAboutCompanyPage();
+        toggleModalContactsPage();
         openBurgerMenu();
 }
