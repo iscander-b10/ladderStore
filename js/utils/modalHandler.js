@@ -1,4 +1,4 @@
-import { toggleModal } from "./toggleModal";
+import { toggleModal } from "./toggleModal.js";
 
 export const modalHandler = function(idButton, openModalId, closeModalId){
     const button = document.getElementById(idButton);
