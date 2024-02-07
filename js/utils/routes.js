@@ -24,6 +24,7 @@ export const routes = () => {
         }
         case "workExamplesPage": {
             createWorkExamplesPageHandlers();
+            break;
         }
         case "blogPage": {
             createBlogPageHandlers();

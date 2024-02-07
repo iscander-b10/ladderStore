@@ -16,9 +16,12 @@ export const checkOrderForm = () => {
         customerName: {
             regExr: /^[А-Я][а-яё]*$/,
         },
+        customerPhone: {
+            regExr: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
+        },
         customerMail: {
             regExr: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-        }
+        },
     };
 
     const getValue = (id) => document.getElementById(id).value;
@@ -78,71 +81,54 @@ export const checkOrderForm = () => {
 
     //step3
     document.getElementById("calculate").addEventListener("click", () => {
+        const pasteValue = (id, value) => {
+            const adjustingValue = value > 0 ? value + " см" : value; 
+            document.getElementById(id).textContent = adjustingValue;
+        }
+        
         const typeFacingSelected = document.querySelector(
             "input[name='facing']:checked"
         );
         order.finishesView = typeFacingSelected.value;
 
-        const valueType = document.getElementById("valueType");
-        valueType.textContent = order.typeStairs;
-        const valueView = document.getElementById("valueView");
-        valueView.textContent = order.stairsView;
-        const valueFacing = document.getElementById("valueFinish");
-        valueFacing.textContent = order.finishesView;
-
-        const valueLength = document.getElementById("valueLength");
-        valueLength.textContent = order.stairParams.length + " " + "см";
-        const valueWidth = document.getElementById("valueWidth");
-        valueWidth.textContent = order.stairParams.width + " " + "см";
-        const valueHeight = document.getElementById("valueHeight");
-        valueHeight.textContent = order.stairParams.height + " " + "см";
+        const arrInputs = {
+            valueType: order.typeStairs,
+            valueView: order.stairsView,
+            valueFinish: order.finishesView,
+            valueLength: order.stairParams.length,
+            valueWidth: order.stairParams.width,
+            valueHeight: order.stairParams.height,
+        }
+        
+        Object.keys(arrInputs).map((id) => pasteValue(id, arrInputs[id]));
     });
 
     //step4
-    document.getElementById("getAQuote").addEventListener("click", () => {
-        const name = getValue("customerName");
-        const InputName = document.getElementById("customerName");
-        const RegExrName = /[A-Za-zА-Яа-я]/;
-
-        const phone = getValue("customerPhone");
-        const InputPhone = document.getElementById("customerPhone");
-        const RegExrPhone =
-            /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-
-        const mail = getValue("customerMail");
-        const InputMail = document.getElementById("customerMail");
-
-        if (RegExrName.test(name) == false) {
-            InputName.classList.add("error");
-            InputName.focus();
-            return;
-        } else if (RegExrPhone.test(phone) == false) {
-            InputName.classList.remove("error");
-            InputPhone.classList.add("error");
-            InputPhone.focus();
-            return;
-        } else if (checkCondition('customerMail')) {
-            InputMail.classList.add("error");
-            InputName.classList.remove("error");
-            InputPhone.classList.remove("error");
-            InputMail.focus();
-            return;
-        } else {
-            InputPhone.classList.remove("error");
-            InputName.classList.remove("error");
-            InputMail.classList.remove("error");
-        }
-
-        const customer = { name, phone, email: mail };
-
-        order.customer = customer;
-
-        const closesizeOfStairs = document.getElementById("finish");
-        closesizeOfStairs.classList.remove("active");
-
-        window.setTimeout(
-            () => console.log("Заказ сформирован и отправлен: ", order),
-            1000
+    const arrCustomer = ["customerName", "customerPhone", "customerMail"];
+    arrCustomer.map((id) =>
+        document
+            .getElementById(id)
+            .addEventListener("change", () => checkCondition(id))
         );
+    
+    document.getElementById("getAQuote").addEventListener("click", () => {
+        const checkInputs =  arrCustomer.filter((id) => checkCondition(id)).length;
+        
+        if (!checkInputs) {
+            order.customer = {
+                customerName: getValue("customerName"),
+                customerPhone: getValue("customerPhone"),
+                customerMail: getValue("customerMail"),
+            };
+            const closesizeOfStairs = document.getElementById("finish");
+            closesizeOfStairs.classList.remove("active");
+            
+            window.setTimeout(
+                () => console.log("Заказ сформирован и отправлен: ", order),
+                1000
+            );
+        }
     });
 };
+
+
