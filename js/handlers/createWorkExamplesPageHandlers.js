@@ -1,8 +1,8 @@
 import {openBurgerMenu} from "../burgerMenu.js";
 import {createModalHandler} from "../utils/createModalHandler.js";
 import {pasteContent} from "../pasteContentInBlock.js";
-import {contractOfferContent} from "../../data/contractOfferContent.js";
-import {privacyPolicyContent} from "../../data/privacyPolicyContent.js";
+import {CONTRACT_OFFER_CONTENT} from "../../data/contractOfferContent.js";
+import {PRIVACY_POLICY_CONTENT} from "../../data/privacyPolicyContent.js";
 
 const MODAL_IDS = [
         ["callMeBack", "application"],
@@ -19,8 +19,8 @@ const MODAL_IDS = [
 ];
 
 export const createWorkExamplesPageHandlers = () => {
-    pasteContent('contractOffer__content', contractOfferContent);
-    pasteContent('privacyPolicy__content', privacyPolicyContent);
+    pasteContent('contractOffer__content', CONTRACT_OFFER_CONTENT);
+    pasteContent('privacyPolicy__content', PRIVACY_POLICY_CONTENT);
 
     MODAL_IDS.map((elem) => createModalHandler(...elem));
     
