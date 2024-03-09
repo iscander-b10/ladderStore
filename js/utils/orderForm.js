@@ -46,13 +46,47 @@ export const checkOrderForm = () => {
         }
     };
 
+    const handleClick = (id) => {
+        switch(id) {
+            case "nextOne": {
+                const typeStairsSelected = document.querySelector(
+                    "input[name='typesOfStairs']:checked"
+                );
+                order.typeStairs = typeStairsSelected.value;
+                
+                break;
+            }
+
+            case "calculate": {
+                const pasteValue = (id, value) => {
+                    const adjustingValue = value > 0 ? value + " см" : value; 
+                    document.getElementById(id).textContent = adjustingValue;
+                }
+                
+                const typeFacingSelected = document.querySelector(
+                    "input[name='facing']:checked"
+                );
+                order.finishesView = typeFacingSelected.value;
+        
+                const arrInputs = {
+                    valueType: order.typeStairs,
+                    valueView: order.stairsView,
+                    valueFinish: order.finishesView,
+                    valueLength: order.stairParams.length,
+                    valueWidth: order.stairParams.width,
+                    valueHeight: order.stairParams.height,
+                }
+                
+                Object.keys(arrInputs).map((id) => pasteValue(id, arrInputs[id]));
+                
+                break;
+            }
+            
+        }
+    }   
+
     //step1
-    document.getElementById("nextOne").addEventListener("click", () => {
-        const typeStairsSelected = document.querySelector(
-            "input[name='typesOfStairs']:checked"
-        );
-        order.typeStairs = typeStairsSelected.value;
-    });
+    document.getElementById("nextOne").addEventListener("click", () => handleClick("nextOne"));
 
     //step2
     const arrId = ['height', 'length', 'width'];
@@ -80,28 +114,7 @@ export const checkOrderForm = () => {
     });
 
     //step3
-    document.getElementById("calculate").addEventListener("click", () => {
-        const pasteValue = (id, value) => {
-            const adjustingValue = value > 0 ? value + " см" : value; 
-            document.getElementById(id).textContent = adjustingValue;
-        }
-        
-        const typeFacingSelected = document.querySelector(
-            "input[name='facing']:checked"
-        );
-        order.finishesView = typeFacingSelected.value;
-
-        const arrInputs = {
-            valueType: order.typeStairs,
-            valueView: order.stairsView,
-            valueFinish: order.finishesView,
-            valueLength: order.stairParams.length,
-            valueWidth: order.stairParams.width,
-            valueHeight: order.stairParams.height,
-        }
-        
-        Object.keys(arrInputs).map((id) => pasteValue(id, arrInputs[id]));
-    });
+    document.getElementById("calculate").addEventListener("click", () => handleClick("calculate"));
 
     //step4
     const arrCustomer = ["customerName", "customerPhone", "customerMail"];
