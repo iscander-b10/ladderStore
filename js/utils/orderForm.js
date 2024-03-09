@@ -24,7 +24,17 @@ export const checkOrderForm = () => {
         },
     };
 
+    const IDS = {
+        inputs: {
+            stepTwo: ['height', 'length', 'width'],
+            stepFour: ["customerName", "customerPhone", "customerMail"],
+        },
+        buttons: ["nextOne", "nextTwo", "calculate", "getAQuote"],
+    }
+
     const getValue = (id) => document.getElementById(id).value;
+
+    const checkInputs = (step) => IDS.inputs[step].filter((id) => checkCondition(id)).length;
 
     const checkCondition = (id) => {
         const { start, end, regExr } = CONDITIONS[id];
@@ -46,13 +56,33 @@ export const checkOrderForm = () => {
         }
     };
 
-    const handleClick = (id) => {
+    const handleClick = (event) => {
+        const id = event.target.id;
         switch(id) {
             case "nextOne": {
                 const typeStairsSelected = document.querySelector(
                     "input[name='typesOfStairs']:checked"
                 );
                 order.typeStairs = typeStairsSelected.value;
+                
+                break;
+            }
+
+            case "nextTwo": {
+                const typeViewSelected = document.querySelector(
+                    "input[name='viewStairs']:checked"
+                    ).value;
+        
+                if (!checkInputs("stepTwo")) {
+                    document.getElementById("facing").classList.add("active");
+                    document.getElementById("sizeOfStairs").classList.remove("active");
+                    order.stairParams = {
+                        height: getValue("height"),
+                        width: getValue("width"),
+                        length: getValue("length"),
+                    };
+                    order.stairsView = typeViewSelected;
+                }
                 
                 break;
             }
@@ -82,66 +112,44 @@ export const checkOrderForm = () => {
                 break;
             }
             
+            case "getAQuote": {
+                if (!checkInputs("stepFour")) {
+                    order.customer = {
+                        customerName: getValue("customerName"),
+                        customerPhone: getValue("customerPhone"),
+                        customerMail: getValue("customerMail"),
+                    };
+                    const closesizeOfStairs = document.getElementById("finish");
+                    closesizeOfStairs.classList.remove("active");
+                    
+                    window.setTimeout(
+                        () => console.log("Заказ сформирован и отправлен: ", order),
+                        1000
+                    );
+                }
+                
+                break;
+            }
         }
     }   
 
-    //step1
-    document.getElementById("nextOne").addEventListener("click", () => handleClick("nextOne"));
-
-    //step2
-    const arrId = ['height', 'length', 'width'];
-    arrId.map((id) =>
-        document
-            .getElementById(id)
-            .addEventListener("change", () => checkCondition(id))
-    );
-    document.getElementById("nextTwo").addEventListener("click", () => {
-        const typeViewSelected = document.querySelector(
-            "input[name='viewStairs']:checked"
-            ).value;
-        const checkInputs = arrId.filter((id) => checkCondition(id)).length;
-
-        if (!checkInputs) {
-            document.getElementById("facing").classList.add("active");
-            document.getElementById("sizeOfStairs").classList.remove("active");
-            order.stairParams = {
-                height: getValue("height"),
-                width: getValue("width"),
-                length: getValue("length"),
-            };
-            order.stairsView = typeViewSelected;
-        }
-    });
-
-    //step3
-    document.getElementById("calculate").addEventListener("click", () => handleClick("calculate"));
-
-    //step4
-    const arrCustomer = ["customerName", "customerPhone", "customerMail"];
-    arrCustomer.map((id) =>
-        document
-            .getElementById(id)
-            .addEventListener("change", () => checkCondition(id))
-        );
-    
-    document.getElementById("getAQuote").addEventListener("click", () => {
-        const checkInputs =  arrCustomer.filter((id) => checkCondition(id)).length;
-        
-        if (!checkInputs) {
-            order.customer = {
-                customerName: getValue("customerName"),
-                customerPhone: getValue("customerPhone"),
-                customerMail: getValue("customerMail"),
-            };
-            const closesizeOfStairs = document.getElementById("finish");
-            closesizeOfStairs.classList.remove("active");
-            
-            window.setTimeout(
-                () => console.log("Заказ сформирован и отправлен: ", order),
-                1000
+    const createListeners = () => {
+        IDS.buttons.map((elem) => document.getElementById(elem).addEventListener("click", handleClick));
+        IDS.inputs.stepTwo.map((id) =>
+            document
+                .getElementById(id)
+                .addEventListener("change", () => checkCondition(id))
             );
-        }
-    });
+   
+        IDS.inputs.stepFour.map((id) =>
+            document
+                .getElementById(id)
+                .addEventListener("change", () => checkCondition(id))
+            );
+    
+    }
+
+    createListeners();
 };
 
 
