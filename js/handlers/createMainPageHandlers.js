@@ -11,7 +11,7 @@ export const createMainPageHandlers = () => {
     pasteContent('contractOffer__content', CONTRACT_OFFER_CONTENT);
     pasteContent('privacyPolicy__content', PRIVACY_POLICY_CONTENT);
 
-    MODAL_IDS_MAINPAGE.map((elem) => createModalHandler(...elem));
+    MODAL_IDS_MAINPAGE.map((elem) => createModalHandler(elem));
     
     scrollOfStairs();
     checkOrderForm();

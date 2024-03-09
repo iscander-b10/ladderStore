@@ -1,4 +1,6 @@
-export const createModalHandler = function(idButton, openModalId, closeModalId){
+export const createModalHandler = function(arrID){
+    const [idButton, openModalId, closeModalId] = arrID;
+    
     const button = document.getElementById(idButton);
     button.addEventListener("click", () => toggleModal(openModalId, closeModalId));
 };
